@@ -110,7 +110,7 @@
       resetState();
       let currentQuestion = questions[currentQuestionIndex];
       let questionNo = currentQuestionIndex + 1;
-      questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+      questionElement.innerHTML = questionNo + ": " + currentQuestion.question;
 
       currentQuestion.answers.forEach((answer) => {
         const button = document.createElement("button");
@@ -139,7 +139,7 @@
         selectedBtn.style.color = "#000";
         score++;
       } else {
-        selectedBtn.style.background = "#ff4c4c";
+        selectedBtn.style.background = "#880000ff";
       }
 
       Array.from(answerButtons.children).forEach((button) => {
