@@ -139,7 +139,7 @@
         selectedBtn.style.color = "#000";
         score++;
       } else {
-        selectedBtn.style.background = "#880000ff";
+        selectedBtn.style.background = "#fe2424ff";
       }
 
       Array.from(answerButtons.children).forEach((button) => {
