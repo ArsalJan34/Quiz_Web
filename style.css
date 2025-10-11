@@ -46,6 +46,7 @@
         padding: 8px 12px;
         border-radius: 8px;
         transition: background 0.3s, color 0.3s;
+        font-size: 18px;
 
     }
     .nav-links ul li a:hover {
@@ -129,4 +130,30 @@
     #next-btn:hover {
       background: #00e09b;
     }
-  
+  @media (max-width: 600px) {
+    .header, .header2 {
+        flex-direction: column;
+        text-align: center;
+      }
+        .nav-links ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .nav-links ul li a {
+            padding: 6px 10px;
+            font-size: 14px;
+        }
+      .quiz-container {
+        padding: 20px;
+      }
+      .question {
+        font-size: 1rem;
+      }
+      .answer-btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+      #next-btn {
+        padding: 8px 16px;
+      }
+    }
