@@ -2,17 +2,78 @@
     * {
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
+      text-decoration: none;
+      list-style: none;
     }
     body {
-      background: #0d1117;
+      background: url(./images/wachbg.png);
+      background-repeat: no-repeat;
+        background-size: cover;
       color: #fff;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
     }
+    .header {
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 2px solid #00e09b;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .header2 {
+        background: transparent;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 2px solid #00e09b;
+    }
+    .nav-links ul {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+    }
+  .nav-links ul li a {
+        color: white;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background 0.3s, color 0.3s;
+
+    }
+    .nav-links ul li a:hover {
+        background: #00e09b;
+        color: #000;
+    }
+.input{
+    background: transparent;
+    border: 2px solid #00e09b;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: white;
+}
+.button{
+    margin: 2px;
+    background: #00e09b;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: white;
+    transition: .5s;
+}
+.button:hover{
+    background: #00e09b;
+    color: black;
+    font-weight: bold;
+    transform:scale(1.1);
+}
     .quiz-container {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.2);
@@ -22,6 +83,7 @@
       width: 90%;
       max-width: 600px;
       padding: 30px;
+      border: solid 2px #00ffb0;
     }
     h1 {
       text-align: center;
@@ -30,6 +92,12 @@
     .question {
       font-size: 1.2rem;
       margin-bottom: 20px;
+    }
+    .quizcard{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
     }
     .answer-btn {
       display: block;
