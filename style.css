@@ -24,6 +24,10 @@
     }
     .logo{
         font-size: 30px;
+         -webkit-text-stroke: 1px rgb(15, 15, 15);
+         color: #00e09b;
+         font-weight: bolder;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     .header2 {
         background: transparent;
