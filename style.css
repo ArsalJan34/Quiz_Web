@@ -637,12 +637,93 @@
     padding: 0 10px;
   }
 
+/* Java Quiz Styles */
+
+  .welcomejava{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 10px;
+  }
+  .welcomejava h1{
+    color: #f89820;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-text-stroke: 1px rgb(15, 15, 15);
+  }
+.tests {
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    border: solid 2px #00ffb0;
+    padding: 50px 20px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+.quiz-list {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto;
+  width: 80%;
+}
+
+.quiz-list li{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
+.start-button{
+  background: #00ffb0;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
-
-
-
+/* Python Quiz Styles */
+.welcomepython{
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 10px;
+  }
+  .welcomepython h1{
+    color: #306998;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-text-stroke: 1px rgb(15, 15, 15);
+  }
+  
 
     /* Responsive Design */
 
