@@ -170,8 +170,9 @@
       width: 100%;
       padding: 20px;
       display:flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      justify-items: center;
       
 
       
@@ -189,18 +190,67 @@
       color: #ff5733;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: bold;
-      font-size: 40px;
+      font-size: 80px;
       -webkit-text-stroke: 1px rgb(15, 15, 15);
 
     }
     .htmlbox p{
       color: white;
-      font-size: 15px;
+      font-size: 30px;
       font-weight: bold;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       margin: 10px 0;
       text-align: center;
     }
+    .htmlbox .buttons{
+      margin: 10px;
+      display: flex;
+     flex-direction: column;
+     gap: 10px;
+    }
+    .buttons .b1{
+      background: #00ffb0;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .buttons .b2{
+      background: #ff5733;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .buttons .b3{
+      font-size: 16px;
+      font-weight: bold;
+      background: #007bff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  .htmldef{
+    font-size: 20px;
+    color: white; 
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    
+    padding: 0 10px;
+
+  }
   @media (max-width: 600px) {
     .header, .header2 {
         flex-direction: column;
