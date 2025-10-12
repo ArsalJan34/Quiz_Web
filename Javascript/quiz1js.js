@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="./quiz1js.css" />
-  </head>
-  <body>
-    <!-- Quiz Container -->
-    <div class="quiz-container">
-      <h1>JavaScript Basics Quiz</h1>
-      <div class="quiz-box">
-        <h2 id="question">Question text</h2>
-        <div id="answer-buttons" class="btn-grid"></div>
-        <button id="next-btn">Next</button>
-      </div>
-    </div>
-
-    <!-- JavaScript Logic -->
-    <script>const questions = [
+const questions = [
   {
     question: "What is the correct file extension for JavaScript files?",
     answers: [
@@ -200,6 +180,3 @@
     ],
   },
 ];
-</script>
-  </body>
-</html>
