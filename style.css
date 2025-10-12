@@ -161,6 +161,7 @@
     font-size: 1.2rem;
     color: white;
     font-weight: bold;
+   gap: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
