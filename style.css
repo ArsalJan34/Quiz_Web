@@ -179,7 +179,7 @@
     }
     /* Creating css for the sections of  languages */
     .html{
-      background: #E0FFFF;
+      background: #2E3A8C;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -266,7 +266,7 @@
 
   }
   .css{
-    background: #7cc8ff;
+    background:#7A5CFA;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -350,7 +350,7 @@
 
   }
   .js{
-    background: rgba(255, 255, 255, 0.05);
+    background:#8A8FA3;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -433,7 +433,7 @@
 
   }
 .python{
-    background: hsl(270, 100%, 71%);
+    background:#BFC7D5;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -512,7 +512,7 @@
     padding: 0 10px;
   }
   .java{
-    background: rgb(93, 243, 52);
+    background: #4B3F72;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -591,7 +591,7 @@
     padding: 0 10px;
   }
   .cpp{
-    background: rgb(255, 115, 139);
+    background:#5865F2;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
