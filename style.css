@@ -142,26 +142,39 @@
         min-height: 80vh;
         background: black;
     }
-    .intro{
-        text-align: center;
-        padding: 50px 20px;
-        display: inline-block;
-        margin: auto;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(6px);
-        width: 80%;
-        max-width: 800px;
-        border: solid 2px #00ffb0;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        color: white;
+.intro {
+    text-align: center;
+    padding: 100px 20px;
+    display: flex; /* change from inline-block */
+    flex-direction: column; /* stack text and button vertically */
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    width: 80%;
+    max-width: 800px;
+    border: solid 2px #00ffb0;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+    .clickb{
+        background: #00ffb0;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 16px;
         font-weight: bold;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        
+        margin-top: 20px;
     }
     /* Creating css for the sections of  languages */
     .html{
@@ -497,8 +510,131 @@
     margin: 10px 0;
     padding: 0 10px;
   }
+  .java{
+    background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      padding: 20px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;    
+  }
+  .javabox{
+    display: inline-block;            
+    margin: 20px;
+    padding:20px;
+    text-align: center;
+  }
+  .javabox h2{
+    color: #f89820;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    -webkit-text-stroke: 1px rgb(15, 15, 15);
+  }
+  .javabox p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .javabox .buttons{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .buttons .b1{
+    background: #00ffb0;
+    color: #000;
+    border: none;
+    border-radius: 8px;
 
-
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .buttons .b2{
+    background: #ff5733;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .buttons .b3{
+    font-size: 16px;
+    font-weight: bold;
+    background: #007bff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;        
+    transition: 0.3s;
+  }
+  .javadef{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+  .cpp{
+    background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      padding: 20px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;    
+      flex-direction: row-reverse;
+  }
+  .cppbox{
+    display: inline-block;
+    margin: 20px;
+    padding:20px;
+    text-align: center;
+  }
+  .cppbox h2{
+    color: #00599c;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    -webkit-text-stroke: 1px rgb(15, 15, 15);
+  }
+  .cppbox p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .cppbox .buttons{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cppdef{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
 
 
 
