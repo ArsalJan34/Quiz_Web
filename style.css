@@ -179,7 +179,7 @@
     }
     /* Creating css for the sections of  languages */
     .html{
-      background: rgba(255, 255, 255, 0.05);
+      background: #E0FFFF;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -209,7 +209,7 @@
 
     }
     .htmlbox p{
-      color: white;
+      color: black;
       font-size: 30px;
       font-weight: bold;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -257,7 +257,7 @@
     }
   .htmldef{
     font-size: 20px;
-    color: white; 
+    color: black; 
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
@@ -266,7 +266,7 @@
 
   }
   .css{
-    background: rgba(255, 255, 255, 0.05);
+    background: #7cc8ff;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -293,7 +293,7 @@
 
   }
   .cssbox p{
-    color: white;
+    color: black;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -341,7 +341,7 @@
   }
   .cssdef{
     font-size: 20px;
-    color: white; 
+    color: black; 
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
@@ -433,7 +433,7 @@
 
   }
 .python{
-    background: rgba(255, 255, 255, 0.05);
+    background: hsl(270, 100%, 71%);
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -512,7 +512,7 @@
     padding: 0 10px;
   }
   .java{
-    background: rgba(255, 255, 255, 0.05);
+    background: rgb(93, 243, 52);
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -535,7 +535,7 @@
     -webkit-text-stroke: 1px rgb(15, 15, 15);
   }
   .javabox p{
-    color: white;
+    color: black;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -584,14 +584,14 @@
   }
   .javadef{
     font-size: 20px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
     padding: 0 10px;
   }
   .cpp{
-    background: rgba(255, 255, 255, 0.05);
+    background: rgb(255, 115, 139);
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
