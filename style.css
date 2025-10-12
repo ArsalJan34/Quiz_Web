@@ -179,7 +179,7 @@
     }
     /* Creating css for the sections of  languages */
     .html{
-      background: #2E3A8C;
+      background: #1e202e;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -266,7 +266,7 @@
 
   }
   .css{
-    background:#7A5CFA;
+    background:#353147;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -350,7 +350,7 @@
 
   }
   .js{
-    background:#8A8FA3;
+    background:#1a3320;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
@@ -433,7 +433,7 @@
 
   }
 .python{
-    background:#BFC7D5;
+    background:#1c2c48;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
       padding: 20px;
