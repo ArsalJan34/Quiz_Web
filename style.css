@@ -251,6 +251,262 @@
     padding: 0 10px;
 
   }
+  .css{
+    background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      padding: 20px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;
+  }
+  .cssbox{
+    display: inline-block;
+    margin: 20px;
+    padding:20px;
+    text-align: center;
+
+    
+  }
+  .cssbox h2{
+    color: #007bff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    -webkit-text-stroke: 1px rgb(15, 15, 15);
+
+  }
+  .cssbox p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .cssbox .buttons{
+    margin: 10px;
+    display: flex;
+   flex-direction: column;
+   gap: 10px;
+  }
+  .buttons .b1{
+    background: #00ffb0;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .buttons .b2{
+    background: #ff5733;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .buttons .b3{
+    font-size: 16px;
+    font-weight: bold;
+    background: #007bff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .cssdef{
+    font-size: 20px;
+    color: white; 
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    
+    padding: 0 10px;
+
+  }
+  .js{
+    background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      padding: 20px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;
+  }
+  .jsbox{
+    display: inline-block;
+    margin: 20px;
+    padding:20px;
+    text-align: center;
+
+    
+  }
+  .jsbox h2{
+    color: #ffdf00;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    -webkit-text-stroke: 1px rgb(15, 15, 15);
+
+  }
+  .jsbox p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .jsbox .buttons{
+    margin: 10px;
+    display: flex;
+   flex-direction: column;
+   gap: 10px;
+  }
+  .buttons .b1{
+    background: #00ffb0;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .buttons .b2{
+    background: #ff5733;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .buttons .b3{
+    font-size: 16px;
+    font-weight: bold;
+    background: #007bff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .jsdef{
+    font-size: 20px;
+    color: white; 
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    
+    padding: 0 10px;
+
+  }
+.python{
+    background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      padding: 20px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;    
+  }
+  .pythonbox{
+    display: inline-block;
+    margin: 20px;
+    padding:20px;
+    text-align: center;
+  }
+  .pythonbox h2{
+    color: #306998;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    -webkit-text-stroke: 1px rgb(15, 15, 15);
+  }
+  .pythonbox p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .pythonbox .buttons{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .buttons .b1{
+    background: #00ffb0;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .buttons .b2{
+    background: #ff5733;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .buttons .b3{
+    font-size: 16px;
+    font-weight: bold;
+    background: #007bff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .pydef{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+  
+
+
+
+
+
+
+
+
+
+    /* Responsive Design */
+
   @media (max-width: 600px) {
     .header, .header2 {
         flex-direction: column;
