@@ -260,6 +260,7 @@
       justify-content: space-between;
       align-items: center;
       justify-items: center;
+      flex-direction: row-reverse;
   }
   .cssbox{
     display: inline-block;
@@ -426,6 +427,7 @@
       justify-content: space-between;
       align-items: center;
       justify-items: center;    
+      flex-direction: row-reverse;
   }
   .pythonbox{
     display: inline-block;
@@ -495,7 +497,7 @@
     margin: 10px 0;
     padding: 0 10px;
   }
-  
+
 
 
 
