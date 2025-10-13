@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Section - BrainByte</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- Main Header -->
@@ -18,6 +19,16 @@
 
     <!-- Navigation Bar -->
     <header class="header2">
+            <nav class="sidebar">
+                <a href="#" onclick="hideSidebar()"><i class='bx bx-x'></i></a>
+                    <a href="#" class="active">Home</a>
+                    <a href="./python.html">Python</a>
+                    <a href="./java.html">Java</a>
+                    <a href="./javascript.html">JavaScript</a>
+                    <a href="./cpp.html">C++</a>
+                    <a href="./html.html">HTML</a>
+                    <a href="./css.html">CSS</a>
+            </nav>
         <nav class="nav-links">
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -29,6 +40,9 @@
                 <li><a href="./css.html">CSS</a></li>
             </ul>
         </nav>
+            <div class="menu-icon" onclick="showSidebar()">
+      <a href="#"><i class='bx bx-menu'></i></a>
+    </div>
     </header>
 
     <!-- HTML Section -->
