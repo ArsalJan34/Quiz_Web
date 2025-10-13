@@ -188,89 +188,113 @@ const questions = [
     ],
   },
 ];
-  const questionElement = document.getElementById("question");
-    const answerButtons = document.getElementById("answer-buttons");
-    const nextButton = document.getElementById("next-btn");
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+const prevButton = document.getElementById("prev-btn");
 
-    let currentQuestionIndex = 0;
-    let score = 0;
 
-    function startQuiz() {
-      currentQuestionIndex = 0;
-      score = 0;
-      nextButton.innerHTML = "Next";
-      showQuestion();
+let currentQuestionIndex = 0;
+let score = 0;
+let selectedAnswers = {}; // Store user choices by question index
+
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  selectedAnswers = {};
+  nextButton.innerHTML = "Next";
+  prevButton.style.display = "none";
+  showQuestion();
+}
+
+function showQuestion() {
+  resetState();
+
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNo = currentQuestionIndex + 1;
+  questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+  currentQuestion.answers.forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("answer-btn");
+
+    // If this answer was previously selected, highlight it
+    if (selectedAnswers[currentQuestionIndex] === index) {
+      button.classList.add("selected");
     }
 
-    function showQuestion() {
-      resetState();
-      let currentQuestion = questions[currentQuestionIndex];
-      let questionNo = currentQuestionIndex + 1;
-      questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    button.addEventListener("click", () => selectAnswer(index));
+    answerButtons.appendChild(button);
+  });
 
-      currentQuestion.answers.forEach((answer) => {
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("answer-btn");
-        answerButtons.appendChild(button);
-        if (answer.correct) {
-          button.dataset.correct = answer.correct;
-        }
-        button.addEventListener("click", selectAnswer);
-      });
+  // Show previous button if not on first question
+  prevButton.style.display = currentQuestionIndex > 0 ? "block" : "none";
+  nextButton.style.display = "block";
+}
+
+function resetState() {
+  while (answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
+  }
+}
+
+// When user selects an answer
+function selectAnswer(index) {
+  selectedAnswers[currentQuestionIndex] = index;
+
+  // Remove highlight from all buttons
+  Array.from(answerButtons.children).forEach((button) =>
+    button.classList.remove("selected")
+  );
+
+  // Highlight the clicked one
+  answerButtons.children[index].classList.add("selected");
+}
+
+// When clicking Next
+function handleNextButton() {
+  if (currentQuestionIndex < questions.length - 1) {
+    currentQuestionIndex++;
+    showQuestion();
+  } else {
+    showScore();
+  }
+}
+
+// When clicking Previous
+function handlePrevButton() {
+  if (currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    showQuestion();
+  }
+}
+
+function showScore() {
+  resetState();
+
+  // Calculate score
+  score = 0;
+  questions.forEach((q, i) => {
+    const selectedIndex = selectedAnswers[i];
+    if (selectedIndex !== undefined && q.answers[selectedIndex].correct) {
+      score++;
     }
+  });
 
-    function resetState() {
-      nextButton.style.display = "none";
-      while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild);
-      }
-    }
+  questionElement.innerHTML = `🎯 You scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+  prevButton.style.display = "none";
+}
 
-    function selectAnswer(e) {
-      const selectedBtn = e.target;
-      const isCorrect = selectedBtn.dataset.correct === "true";
-      if (isCorrect) {
-        selectedBtn.style.background = "#00ffb0";
-        selectedBtn.style.color = "#000";
-        score++;
-      } else {
-        selectedBtn.style.background = "#ff4c4c";
-      }
-
-      Array.from(answerButtons.children).forEach((button) => {
-        if (button.dataset.correct === "true") {
-          button.style.background = "#00ffb0";
-          button.style.color = "#000";
-        }
-        button.disabled = true;
-      });
-
-      nextButton.style.display = "block";
-    }
-
-    function showScore() {
-      resetState();
-      questionElement.innerHTML = `🎉 You scored ${score} out of ${questions.length}!`;
-      nextButton.innerHTML = "Play Again";
-      nextButton.style.display = "block";
-    }
-
-    function handleNextButton() {
-      currentQuestionIndex++;
-      if (currentQuestionIndex < questions.length) {
-        showQuestion();
-      } else {
-        showScore();
-      }
-    }
-
-    nextButton.addEventListener("click", () => {
-      if (currentQuestionIndex < questions.length) {
-        handleNextButton();
-      } else {
-        startQuiz();
-      }
-    });
-
+nextButton.addEventListener("click", () => {
+  if (nextButton.innerHTML === "Play Again") {
     startQuiz();
+  } else {
+    handleNextButton();
+  }
+});
+
+prevButton.addEventListener("click", handlePrevButton);
+
+startQuiz();
