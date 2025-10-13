@@ -1127,8 +1127,9 @@
 display: flex;
   flex-direction: column;
 }
-.socials{
-  display: none;
+.socials a{
+  display: flex;
+  flex-direction: column;
 }
 
 /* ================== Very small phones ================== */
