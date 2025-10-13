@@ -8,186 +8,187 @@
    
 const questions = [
   {
-    question: "What is the output of `print(len([1, 2, 3, 4]))`?",
+    question: "What will be the output of: `print({1, 2, 3} & {3, 4, 5})`?",
     answers: [
-      { text: "4", correct: true },
-      { text: "3", correct: false },
+      { text: "{3}", correct: true },
+      { text: "{1, 2}", correct: false },
+      { text: "{1, 2, 3, 4, 5}", correct: false },
+      { text: "None", correct: false },
+    ],
+  },
+  {
+    question: "Which method is automatically called when an object is initialized?",
+    answers: [
+      { text: "__init__()", correct: true },
+      { text: "__start__()", correct: false },
+      { text: "__create__()", correct: false },
+      { text: "__new__()", correct: false },
+    ],
+  },
+  {
+    question: "What will `print(bool([]) or bool('False'))` return?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+      { text: "None", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which decorator is used to define a method that belongs to the class but not the instance?",
+    answers: [
+      { text: "@classmethod", correct: true },
+      { text: "@staticmethod", correct: false },
+      { text: "@property", correct: false },
+      { text: "@abstractmethod", correct: false },
+    ],
+  },
+  {
+    question: "What will be printed by: `print('Hello {0:.2f}'.format(3.14159))`?",
+    answers: [
+      { text: "Hello 3.14", correct: true },
+      { text: "Hello 3.14159", correct: false },
+      { text: "Hello 3.1", correct: false },
+      { text: "Hello 3", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following statements about generators is TRUE?",
+    answers: [
+      { text: "They yield values one at a time using the `yield` keyword.", correct: true },
+      { text: "They store all values in memory.", correct: false },
+      { text: "They are slower than lists.", correct: false },
+      { text: "They can’t be iterated over.", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of `print(type(lambda x: x))`?",
+    answers: [
+      { text: "<class 'function'>", correct: true },
+      { text: "<class 'lambda'>", correct: false },
+      { text: "<class 'method'>", correct: false },
+      { text: "<class 'object'>", correct: false },
+    ],
+  },
+  {
+    question: "Which module is used for working with JSON data in Python?",
+    answers: [
+      { text: "json", correct: true },
+      { text: "pickle", correct: false },
+      { text: "csv", correct: false },
+      { text: "marshal", correct: false },
+    ],
+  },
+  {
+    question: "What will be the result of: `print('a' * 3 + 'b' * 2)`?",
+    answers: [
+      { text: "aaabb", correct: true },
+      { text: "ab", correct: false },
+      { text: "aabb", correct: false },
+      { text: "aaab", correct: false },
+    ],
+  },
+  {
+    question: "Which of these statements correctly creates a dictionary?",
+    answers: [
+      { text: "d = {'a': 1, 'b': 2}", correct: true },
+      { text: "d = {'a', 1, 'b', 2}", correct: false },
+      { text: "d = ['a':1, 'b':2]", correct: false },
+      { text: "d = dict['a'=1, 'b'=2]", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of `print((lambda x: x+1)(5))`?",
+    answers: [
+      { text: "6", correct: true },
       { text: "5", correct: false },
+      { text: "x+1", correct: false },
       { text: "Error", correct: false },
     ],
   },
   {
-    question: "Which method adds an item to the end of a list?",
-    answers: [
-      { text: "append()", correct: true },
-      { text: "add()", correct: false },
-      { text: "insert()", correct: false },
-      { text: "extend()", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of `print('Hello'.upper())`?",
-    answers: [
-      { text: "HELLO", correct: true },
-      { text: "hello", correct: false },
-      { text: "Hello", correct: false },
-      { text: "error", correct: false },
-    ],
-  },
-  {
-    question: "Which operator is used to check equality in Python?",
-    answers: [
-      { text: "==", correct: true },
-      { text: "=", correct: false },
-      { text: "!=", correct: false },
-      { text: "<>", correct: false },
-    ],
-  },
-  {
-    question: "Which method removes the last item from a list?",
-    answers: [
-      { text: "pop()", correct: true },
-      { text: "remove()", correct: false },
-      { text: "delete()", correct: false },
-      { text: "discard()", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of `print(bool(0))`?",
-    answers: [
-      { text: "False", correct: true },
-      { text: "True", correct: false },
-      { text: "0", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "How do you create a tuple in Python?",
-    answers: [
-      { text: "my_tuple = (1, 2, 3)", correct: true },
-      { text: "my_tuple = [1, 2, 3]", correct: false },
-      { text: "my_tuple = {1, 2, 3}", correct: false },
-      { text: "my_tuple = <1, 2, 3>", correct: false },
-    ],
-  },
-  {
-    question: "What will `print(3 != 3)` output?",
-    answers: [
-      { text: "False", correct: true },
-      { text: "True", correct: false },
-      { text: "3", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which keyword is used to return a value from a function?",
-    answers: [
-      { text: "return", correct: true },
-      { text: "yield", correct: false },
-      { text: "output", correct: false },
-      { text: "break", correct: false },
-    ],
-  },
-  {
-    question: "Which method splits a string into a list of words?",
-    answers: [
-      { text: "split()", correct: true },
-      { text: "divide()", correct: false },
-      { text: "cut()", correct: false },
-      { text: "partition()", correct: false },
-    ],
-  },
-  {
-    question: "What is the correct way to check if 'apple' is in a list `fruits`?",
-    answers: [
-      { text: "'apple' in fruits", correct: true },
-      { text: "'apple' include fruits", correct: false },
-      { text: "fruits.has('apple')", correct: false },
-      { text: "fruits.contains('apple')", correct: false },
-    ],
-  },
-  {
-    question: "Which of these is an immutable data type in Python?",
-    answers: [
-      { text: "tuple", correct: true },
-      { text: "list", correct: false },
-      { text: "dictionary", correct: false },
-      { text: "set", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of `print(5 // 2)`?",
-    answers: [
-      { text: "2", correct: true },
-      { text: "2.5", correct: false },
-      { text: "3", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which keyword is used to define an anonymous function?",
+    question: "Which keyword is used to define an anonymous block of code in Python?",
     answers: [
       { text: "lambda", correct: true },
       { text: "def", correct: false },
       { text: "func", correct: false },
-      { text: "anonymous", correct: false },
+      { text: "block", correct: false },
     ],
   },
   {
-    question: "What is the output of `print('Python'.replace('P', 'J'))`?",
+    question: "What will `print(sum(i for i in range(4)))` output?",
     answers: [
-      { text: "Jython", correct: true },
-      { text: "Python", correct: false },
-      { text: "ython", correct: false },
-      { text: "Error", correct: false },
+      { text: "6", correct: true },
+      { text: "10", correct: false },
+      { text: "4", correct: false },
+      { text: "3", correct: false },
     ],
   },
   {
-    question: "Which of these is the correct way to inherit a class?",
+    question: "Which built-in function can be used to get the ASCII value of a character?",
     answers: [
-      { text: "class Child(Parent):", correct: true },
-      { text: "class Child inherits Parent:", correct: false },
-      { text: "class Child -> Parent:", correct: false },
-      { text: "class Child : Parent", correct: false },
+      { text: "ord()", correct: true },
+      { text: "chr()", correct: false },
+      { text: "ascii()", correct: false },
+      { text: "repr()", correct: false },
     ],
   },
   {
-    question: "How do you add multiple elements to a list at once?",
-    answers: [
-      { text: "extend()", correct: true },
-      { text: "append()", correct: false },
-      { text: "add()", correct: false },
-      { text: "insert()", correct: false },
-    ],
-  },
-  {
-    question: "What does the `strip()` method do in Python?",
-    answers: [
-      { text: "Removes whitespace from the beginning and end of a string", correct: true },
-      { text: "Removes all spaces inside a string", correct: false },
-      { text: "Removes punctuation from a string", correct: false },
-      { text: "Deletes the string", correct: false },
-    ],
-  },
-  {
-    question: "Which of these functions returns the largest number?",
-    answers: [
-      { text: "max()", correct: true },
-      { text: "largest()", correct: false },
-      { text: "top()", correct: false },
-      { text: "high()", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of `print(bool(''))`?",
+    question: "What will `print(3 < 3.0)` return?",
     answers: [
       { text: "False", correct: true },
       { text: "True", correct: false },
-      { text: "''", correct: false },
-      { text: "0", correct: false },
+      { text: "Error", correct: false },
+      { text: "None", correct: false },
     ],
   },
+  {
+    question: "Which Python feature allows functions to take other functions as arguments?",
+    answers: [
+      { text: "First-class functions", correct: true },
+      { text: "Generators", correct: false },
+      { text: "Closures", correct: false },
+      { text: "Decorators", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of `print({x: x**2 for x in range(3)})`?",
+    answers: [
+      { text: "{0: 0, 1: 1, 2: 4}", correct: true },
+      { text: "{1: 1, 2: 4, 3: 9}", correct: false },
+      { text: "[0, 1, 4]", correct: false },
+      { text: "{0, 1, 2, 4}", correct: false },
+    ],
+  },
+  {
+    question: "Which of these functions converts a string to a list of words by whitespace?",
+    answers: [
+      { text: "split()", correct: true },
+      { text: "strip()", correct: false },
+      { text: "replace()", correct: false },
+      { text: "partition()", correct: false },
+    ],
+  },
+  {
+    question: "What does the expression `a, b = b, a` do in Python?",
+    answers: [
+      { text: "Swaps the values of a and b", correct: true },
+      { text: "Deletes both variables", correct: false },
+      { text: "Creates a tuple", correct: false },
+      { text: "Throws an error", correct: false },
+    ],
+  },
+  {
+    question: "What will `print([i for i in range(5) if i % 2 == 0])` output?",
+    answers: [
+      { text: "[0, 2, 4]", correct: true },
+      { text: "[1, 3, 5]", correct: false },
+      { text: "[2, 4]", correct: false },
+      { text: "[0, 1, 2, 3, 4]", correct: false },
+    ],
+  }
 ];
+
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
