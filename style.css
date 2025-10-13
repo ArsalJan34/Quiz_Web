@@ -819,6 +819,13 @@
     font-size: 18px;
     gap: 10px;
   }
+  .logo2{
+        font-size: 30px;
+         -webkit-text-stroke: 1px rgb(15, 15, 15);
+         color: #00e09b;
+         font-weight: bolder;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
   .footer-content{
     display: flex;
     justify-content: space-between;
@@ -1057,6 +1064,20 @@
   .sidebar .bx-x {
     font-size: 28px;
   }
+  .footer-links a{
+  font-size: 16px;
+}
+ .htmldef, .cssdef, .jsdef, .pydef, .javadef, .cppdef {
+    padding: 20px;
+  }
+
+  .htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
+    font-size: 10px;
+  }
+
+  .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
+    font-size: 8px;
+  }
 }
 
 /* ================== Header adjustments for mobile ================== */
@@ -1076,6 +1097,7 @@
     padding: 6px 10px;
     font-size: 14px;
   }
+
 }
 
 /* ================== Section scaling for mobile ================== */
@@ -1104,6 +1126,20 @@
 
   .htmlbox p, .cssbox p, .jsbox p, .pythonbox p, .javabox p, .cppbox p {
     font-size: 24px;
+  }
+  .footer-links a{
+  font-size: 12px;
+}
+ .htmldef, .cssdef, .jsdef, .pydef, .javadef, .cppdef {
+    padding: 25px;
+  }
+
+  .htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
+    font-size: 18px;
+  }
+
+  .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
+    font-size: 15px;
   }
 }
 
@@ -1136,6 +1172,21 @@
     font-size: 14px;
     padding: 8px 12px;
   }
+  .footer-links a{
+  font-size: 10px;
+}
+ .htmldef, .cssdef, .jsdef, .pydef, .javadef, .cppdef {
+    padding: 18px;
+  }
+
+  .htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
+    font-size: 12px;
+  }
+
+  .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
+    font-size: 10px;
+  }
+
 }
 
 /* ================== Very small phones ================== */
@@ -1168,5 +1219,16 @@
 
   #next-btn {
     padding: 6px 12px;
+  }
+ .htmldef, .cssdef, .jsdef, .pydef, .javadef, .cppdef {
+    padding: 16px;
+  }
+
+  .htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
+    font-size: 10px;
+  }
+
+  .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
+    font-size: 8px;
   }
 }
