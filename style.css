@@ -7,6 +7,10 @@
       margin: 0;
       padding: 0;
     }
+    html {
+  scroll-behavior: smooth;
+}
+
     body {
       background: black;
       
@@ -193,6 +197,7 @@
       
 
     }
+    
     .htmlbox{
       display: inline-block;
       margin: 20px;
@@ -256,14 +261,13 @@
       cursor: pointer;
       transition: 0.3s;
     }
-  .htmldef{
+  .htmldef, .cssdef, .jsdef, .cppdef, .pydef, .javadef{
     font-size: 20px;
     color: rgb(255, 255, 255); 
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
-    
-    padding: 0 10px;
+    padding: 10px 10px;
 
   }
   .css{
@@ -341,7 +345,7 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  .cssdef{
+  /* .cssdef{
     font-size: 20px;
     color: rgb(255, 255, 255); 
     font-weight: bold;
@@ -350,7 +354,7 @@
     
     padding: 0 10px;
 
-  }
+  } */
   .js{
     background:#000000;
      border-bottom: 2px solid #00e09b;
@@ -392,40 +396,7 @@
    flex-direction: column;
    gap: 10px;
   }
-  .buttons .b1{
-    background: #00ffb0;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .buttons .b2{
-    background: #ff5733;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .buttons .b3{
-    font-size: 16px;
-    font-weight: bold;
-    background: #007bff;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .jsdef{
+  /* .jsdef{
     font-size: 20px;
     color: white; 
     font-weight: bold;
@@ -434,7 +405,7 @@
     
     padding: 0 10px;
 
-  }
+  } */
 .python{
     background:#000000;
       border-bottom: 2px solid #00e09b;
@@ -474,47 +445,15 @@
     flex-direction: column;
     gap: 10px;
   }
-  .buttons .b1{
-    background: #00ffb0;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .buttons .b2{
-    background: #ff5733;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .buttons .b3{
-    font-size: 16px;
-    font-weight: bold;
-    background: #007bff;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .pydef{
+
+  /* .pydef{
     font-size: 20px;
     color: white;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
     padding: 0 10px;
-  }
+  } */
   .java{
     background: #000000;
       border-bottom: 2px solid #00e09b;
@@ -587,14 +526,14 @@
     cursor: pointer;        
     transition: 0.3s;
   }
-  .javadef{
+  /* .javadef{
     font-size: 20px;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
     padding: 0 10px;
-  }
+  } */
   .cpp{
     background:#000000;
      border-bottom: 2px solid #00e09b;
@@ -634,14 +573,14 @@
     flex-direction: column;
     gap: 10px;
   }
-  .cppdef{
+  /* .cppdef{
     font-size: 20px;
     color: white;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
     padding: 0 10px;
-  }
+  } */
 
 /* Java Quiz Styles */
 
@@ -1072,11 +1011,11 @@
   }
 
   .htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
-    font-size: 10px;
+    font-size: 30px;
   }
 
   .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
-    font-size: 8px;
+    font-size: 25px;
   }
 }
 
