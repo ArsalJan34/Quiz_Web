@@ -7,61 +7,16 @@
     }
 const questions = [
   {
-    question: "What will be the output of the following code?\n\nconsole.log(typeof NaN);",
+    question: "What is the prototype of an array in JavaScript?",
     answers: [
-      { text: "number", correct: true },
-      { text: "NaN", correct: false },
-      { text: "undefined", correct: false },
-      { text: "object", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following is NOT a primitive data type in JavaScript?",
-    answers: [
-      { text: "Object", correct: true },
-      { text: "String", correct: false },
-      { text: "Boolean", correct: false },
-      { text: "Number", correct: false },
-    ],
-  },
-  {
-    question: "What is the result of `[] + []` in JavaScript?",
-    answers: [
-      { text: '"" (empty string)', correct: true },
-      { text: "undefined", correct: false },
-      { text: "0", correct: false },
+      { text: "Array.prototype", correct: true },
+      { text: "Object.prototype", correct: false },
+      { text: "Function.prototype", correct: false },
       { text: "null", correct: false },
     ],
   },
   {
-    question: "Which method is used to define getters and setters in JavaScript objects?",
-    answers: [
-      { text: "Object.defineProperty()", correct: true },
-      { text: "Object.assign()", correct: false },
-      { text: "Object.create()", correct: false },
-      { text: "Object.setPrototypeOf()", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of the following?\n\nconsole.log(0.1 + 0.2 === 0.3);",
-    answers: [
-      { text: "false", correct: true },
-      { text: "true", correct: false },
-      { text: "undefined", correct: false },
-      { text: "TypeError", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following statements about closures is TRUE?",
-    answers: [
-      { text: "They allow inner functions to access outer function variables even after the outer function returns.", correct: true },
-      { text: "They prevent variable access between functions.", correct: false },
-      { text: "They are used only with classes.", correct: false },
-      { text: "They work only in strict mode.", correct: false },
-    ],
-  },
-  {
-    question: "What will the following code print?\n\nconsole.log([] == ![]);",
+    question: "What is the output of the following code?\n\nconsole.log(Object.getPrototypeOf([]) === Array.prototype);",
     answers: [
       { text: "true", correct: true },
       { text: "false", correct: false },
@@ -70,120 +25,165 @@ const questions = [
     ],
   },
   {
-    question: "Which statement about 'this' keyword in arrow functions is correct?",
+    question: "Which of the following best describes the 'prototype chain'?",
     answers: [
-      { text: "It refers to the surrounding lexical scope.", correct: true },
-      { text: "It always refers to the global object.", correct: false },
-      { text: "It is redefined when called as a method.", correct: false },
-      { text: "It must be bound explicitly using bind().", correct: false },
+      { text: "A mechanism by which objects inherit properties from other objects.", correct: true },
+      { text: "A list of all functions defined in a script.", correct: false },
+      { text: "A sequence of constructor calls.", correct: false },
+      { text: "A method to link arrays and functions.", correct: false },
     ],
   },
   {
-    question: "Which of the following is TRUE about 'async/await' in JavaScript?",
+    question: "What happens if you call a class constructor without 'new'?",
     answers: [
-      { text: "It is syntactic sugar over Promises.", correct: true },
-      { text: "It blocks the main thread.", correct: false },
-      { text: "It replaces the need for Promises entirely.", correct: false },
-      { text: "It cannot be used with try...catch.", correct: false },
+      { text: "It throws a TypeError.", correct: true },
+      { text: "It returns undefined.", correct: false },
+      { text: "It automatically uses 'new'.", correct: false },
+      { text: "It binds 'this' to the global object.", correct: false },
     ],
   },
   {
-    question: "What does the 'new' keyword do in JavaScript?",
+    question: "Which built-in method can you use to create an object with no prototype?",
     answers: [
-      { text: "Creates a new object linked to the constructor's prototype.", correct: true },
-      { text: "Creates a global variable.", correct: false },
-      { text: "Invokes the function in strict mode.", correct: false },
-      { text: "Binds the function to the window object.", correct: false },
+      { text: "Object.create(null)", correct: true },
+      { text: "Object.freeze()", correct: false },
+      { text: "Object.assign()", correct: false },
+      { text: "Object.prototype()", correct: false },
     ],
   },
   {
-    question: "Which method can be used to freeze an object to prevent modification?",
+    question: "What is the output of this code?\n\nconsole.log(typeof new Function());",
     answers: [
-      { text: "Object.freeze()", correct: true },
-      { text: "Object.lock()", correct: false },
-      { text: "Object.seal()", correct: false },
-      { text: "Object.preventChange()", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of the following?\n\nconsole.log(typeof null);",
-    answers: [
-      { text: "object", correct: true },
-      { text: "null", correct: false },
+      { text: "function", correct: true },
+      { text: "object", correct: false },
       { text: "undefined", correct: false },
-      { text: "NaN", correct: false },
+      { text: "constructor", correct: false },
     ],
   },
   {
-    question: "Which operator is used to spread elements of an array or object?",
+    question: "Which of these is TRUE about JavaScript memory management?",
     answers: [
-      { text: "... (spread operator)", correct: true },
-      { text: "=>", correct: false },
-      { text: "&", correct: false },
-      { text: "::", correct: false },
+      { text: "It uses automatic garbage collection based on reachability.", correct: true },
+      { text: "It requires manual memory deallocation.", correct: false },
+      { text: "It uses reference counting only.", correct: false },
+      { text: "It collects memory only at program termination.", correct: false },
     ],
   },
   {
-    question: "What does the `bind()` method do in JavaScript?",
+    question: "What is the difference between microtasks and macrotasks?",
     answers: [
-      { text: "Creates a new function with a specific 'this' context.", correct: true },
-      { text: "Immediately invokes a function with a new context.", correct: false },
-      { text: "Copies properties from one object to another.", correct: false },
-      { text: "Prevents context change for methods.", correct: false },
+      { text: "Microtasks (Promises) run before macrotasks (setTimeout).", correct: true },
+      { text: "Macrotasks always run first.", correct: false },
+      { text: "They are executed randomly by the event loop.", correct: false },
+      { text: "Microtasks are synchronous.", correct: false },
     ],
   },
   {
-    question: "Which JavaScript feature allows destructuring arrays or objects into variables?",
+    question: "What is the output of the following?\n\nPromise.resolve().then(() => console.log('A'));\nconsole.log('B');",
     answers: [
-      { text: "Destructuring assignment", correct: true },
-      { text: "Tuple unpacking", correct: false },
-      { text: "Dynamic binding", correct: false },
-      { text: "Pattern mapping", correct: false },
-    ],
-  },
-  {
-    question: "What is the result of `'5' - 3` in JavaScript?",
-    answers: [
-      { text: "2", correct: true },
-      { text: "'53'", correct: false },
-      { text: "NaN", correct: false },
-      { text: "'2'", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of this code?\n\nconsole.log([1, 2, 3] + [4, 5, 6]);",
-    answers: [
-      { text: '"1,2,34,5,6"', correct: true },
-      { text: "[1,2,3,4,5,6]", correct: false },
-      { text: "NaN", correct: false },
+      { text: "B then A", correct: true },
+      { text: "A then B", correct: false },
+      { text: "undefined", correct: false },
       { text: "Error", correct: false },
     ],
   },
   {
-    question: "Which statement correctly describes JavaScript's event loop?",
+    question: "What will the following code print?\n\n(async () => {\n  console.log(await Promise.resolve('X'));\n})();",
     answers: [
-      { text: "It handles asynchronous operations by pushing callbacks to the task queue.", correct: true },
-      { text: "It executes all async tasks in parallel.", correct: false },
-      { text: "It stops execution until async tasks complete.", correct: false },
-      { text: "It executes promises before synchronous code.", correct: false },
-    ],
-  },
-  {
-    question: "Which of these functions returns a Promise?",
-    answers: [
-      { text: "fetch()", correct: true },
-      { text: "JSON.parse()", correct: false },
-      { text: "setTimeout()", correct: false },
-      { text: "eval()", correct: false },
-    ],
-  },
-  {
-    question: "What will `Object.is(NaN, NaN)` return?",
-    answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
+      { text: "X", correct: true },
+      { text: "Promise { 'X' }", correct: false },
       { text: "undefined", correct: false },
-      { text: "TypeError", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "What is the internal slot [[Prototype]] used for?",
+    answers: [
+      { text: "Linking an object to its prototype for inheritance.", correct: true },
+      { text: "Storing constructor parameters.", correct: false },
+      { text: "Referencing private variables.", correct: false },
+      { text: "Defining scope chains.", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of this code?\n\nlet x = { a: 1 };\nlet y = x;\ny.a = 2;\nconsole.log(x.a);",
+    answers: [
+      { text: "2", correct: true },
+      { text: "1", correct: false },
+      { text: "undefined", correct: false },
+      { text: "NaN", correct: false },
+    ],
+  },
+  {
+    question: "What happens when you use `delete` on a variable declared with `var`?",
+    answers: [
+      { text: "It does nothing (variable remains).", correct: true },
+      { text: "It removes the variable.", correct: false },
+      { text: "It throws an error.", correct: false },
+      { text: "It converts it to undefined.", correct: false },
+    ],
+  },
+  {
+    question: "Which of these statements about WeakMap is TRUE?",
+    answers: [
+      { text: "Keys must be objects and are held weakly.", correct: true },
+      { text: "Keys can be strings or numbers.", correct: false },
+      { text: "It allows key enumeration.", correct: false },
+      { text: "It prevents garbage collection.", correct: false },
+    ],
+  },
+  {
+    question: "What will the following code print?\n\nlet obj = { a: 10 };\nObject.freeze(obj);\nobj.a = 20;\nconsole.log(obj.a);",
+    answers: [
+      { text: "10", correct: true },
+      { text: "20", correct: false },
+      { text: "undefined", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following describes the 'Temporal Dead Zone'?",
+    answers: [
+      { text: "The time between variable creation and initialization with let/const.", correct: true },
+      { text: "The time before a function executes.", correct: false },
+      { text: "The delay before garbage collection.", correct: false },
+      { text: "A deprecated feature in ES5.", correct: false },
+    ],
+  },
+  {
+    question: "What does the `Reflect` API in JavaScript provide?",
+    answers: [
+      { text: "A set of static methods for interceptable object operations.", correct: true },
+      { text: "Reflection of DOM elements.", correct: false },
+      { text: "Real-time debugging tools.", correct: false },
+      { text: "Type checking and validation.", correct: false },
+    ],
+  },
+  {
+    question: "What will this code output?\n\nconsole.log(Object.is(+0, -0));",
+    answers: [
+      { text: "false", correct: true },
+      { text: "true", correct: false },
+      { text: "undefined", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following cannot be used as a property key in a normal JavaScript object?",
+    answers: [
+      { text: "An object", correct: true },
+      { text: "A string", correct: false },
+      { text: "A number", correct: false },
+      { text: "A symbol", correct: false },
+    ],
+  },
+  {
+    question: "What is the main purpose of the event delegation pattern in JavaScript?",
+    answers: [
+      { text: "To handle events efficiently by using a common ancestor element.", correct: true },
+      { text: "To prevent event propagation.", correct: false },
+      { text: "To delay event handling until DOM is loaded.", correct: false },
+      { text: "To assign events individually to each child element.", correct: false },
     ],
   },
 ];
