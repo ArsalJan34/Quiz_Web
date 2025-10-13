@@ -1,56 +1,73 @@
+    function showSidebar() {
+      document.querySelector('.sidebar').classList.add('show');
+    }
+
+    function hideSidebar() {
+      document.querySelector('.sidebar').classList.remove('show');
+    }
+   
 const questions = [
   {
-    question: "What is the correct file extension for JavaScript files?",
+    question: "What will be the output of:\n\n```javascript\nconsole.log(typeof 42);\n```",
     answers: [
-      { text: ".js", correct: true },
-      { text: ".java", correct: false },
-      { text: ".javascript", correct: false },
-      { text: ".jvs", correct: false },
+      { text: "\"number\"", correct: true },
+      { text: "\"string\"", correct: false },
+      { text: "\"object\"", correct: false },
+      { text: "\"boolean\"", correct: false },
     ],
   },
   {
-    question: "Which keyword is used to declare a variable in JavaScript?",
+    question: "Which symbol is used for comments in JavaScript?",
     answers: [
-      { text: "var", correct: true },
-      { text: "let", correct: false },
-      { text: "const", correct: false },
-      { text: "All of the above", correct: true },
+      { text: "// for single-line comments", correct: true },
+      { text: "# for single-line comments", correct: false },
+      { text: "<!-- --> for single-line comments", correct: false },
+      { text: "/* */ for single-line comments", correct: false },
     ],
   },
   {
-    question: "How do you write 'Hello World' in an alert box?",
+    question: "What will `console.log(2 + '2')` print?",
     answers: [
-      { text: "alert('Hello World');", correct: true },
-      { text: "msg('Hello World');", correct: false },
-      { text: "prompt('Hello World');", correct: false },
-      { text: "alertBox('Hello World');", correct: false },
+      { text: "\"22\"", correct: true },
+      { text: "4", correct: false },
+      { text: "NaN", correct: false },
+      { text: "undefined", correct: false },
     ],
   },
   {
-    question: "Which symbol is used for single-line comments in JavaScript?",
-    answers: [
-      { text: "//", correct: true },
-      { text: "#", correct: false },
-      { text: "/* */", correct: false },
-      { text: "<!-- -->", correct: false },
-    ],
-  },
-  {
-    question: "What is the correct way to define a function in JavaScript?",
-    answers: [
-      { text: "function myFunction() {}", correct: true },
-      { text: "def myFunction() {}", correct: false },
-      { text: "create function myFunction()", correct: false },
-      { text: "func myFunction()", correct: false },
-    ],
-  },
-  {
-    question: "How do you create a string variable in JavaScript?",
+    question: "Which of the following is a correct way to declare a variable in JavaScript?",
     answers: [
       { text: "let name = 'John';", correct: true },
-      { text: "string name = 'John';", correct: false },
-      { text: "char name = 'John';", correct: false },
-      { text: "text name = 'John';", correct: false },
+      { text: "var = 'John';", correct: false },
+      { text: "name := 'John';", correct: false },
+      { text: "declare name = 'John';", correct: false },
+    ],
+  },
+  {
+    question: "What will be the output of:\n\n```javascript\nconsole.log(5 == '5');\n```",
+    answers: [
+      { text: "true", correct: true },
+      { text: "false", correct: false },
+      { text: "undefined", correct: false },
+      { text: "NaN", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to declare a constant variable?",
+    answers: [
+      { text: "const", correct: true },
+      { text: "var", correct: false },
+      { text: "let", correct: false },
+      { text: "constant", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of:\n\n```javascript\nconsole.log(typeof null);\n```",
+    answers: [
+      { text: "\"object\"", correct: true },
+      { text: "\"null\"", correct: false },
+      { text: "\"undefined\"", correct: false },
+      { text: "\"number\"", correct: false },
     ],
   },
   {
@@ -63,120 +80,224 @@ const questions = [
     ],
   },
   {
-    question: "Which operator is used to compare both value and type?",
+    question: "What will be the output of:\n\n```javascript\nconsole.log(Boolean(0));\n```",
     answers: [
-      { text: "===", correct: true },
-      { text: "==", correct: false },
-      { text: "=", correct: false },
-      { text: "!==", correct: false },
+      { text: "false", correct: true },
+      { text: "true", correct: false },
+      { text: "0", correct: false },
+      { text: "undefined", correct: false },
     ],
   },
   {
     question: "Which of the following is NOT a JavaScript data type?",
     answers: [
-      { text: "Number", correct: false },
-      { text: "String", correct: false },
-      { text: "Boolean", correct: false },
-      { text: "Character", correct: true },
+      { text: "float", correct: true },
+      { text: "number", correct: false },
+      { text: "string", correct: false },
+      { text: "boolean", correct: false },
     ],
   },
   {
-    question: "How do you write an IF statement in JavaScript?",
+    question: "How do you write 'Hello World' in an alert box?",
     answers: [
-      { text: "if (condition) { }", correct: true },
-      { text: "if condition then", correct: false },
-      { text: "if: condition { }", correct: false },
-      { text: "if condition do { }", correct: false },
+      { text: "alert('Hello World');", correct: true },
+      { text: "msg('Hello World');", correct: false },
+      { text: "prompt('Hello World');", correct: false },
+      { text: "console.log('Hello World');", correct: false },
     ],
   },
   {
-    question: "Which method is used to add an element at the end of an array?",
+    question: "What will be the output of:\n\n```javascript\nconsole.log(3 + 2 + '7');\n```",
+    answers: [
+      { text: "\"57\"", correct: true },
+      { text: "\"327\"", correct: false },
+      { text: "\"12\"", correct: false },
+      { text: "\"9\"", correct: false },
+    ],
+  },
+  {
+    question: "Which of these is a valid function declaration in JavaScript?",
+    answers: [
+      { text: "function greet() {}", correct: true },
+      { text: "func greet() {}", correct: false },
+      { text: "def greet() {}", correct: false },
+      { text: "method greet() {}", correct: false },
+    ],
+  },
+  {
+    question: "What does `NaN` stand for?",
+    answers: [
+      { text: "Not a Number", correct: true },
+      { text: "Null as Number", correct: false },
+      { text: "Negative and Null", correct: false },
+      { text: "Number as Null", correct: false },
+    ],
+  },
+  {
+    question: "What is the result of:\n\n```javascript\nconsole.log('5' - 3);\n```",
+    answers: [
+      { text: "2", correct: true },
+      { text: "\"53\"", correct: false },
+      { text: "NaN", correct: false },
+      { text: "undefined", correct: false },
+    ],
+  },
+  {
+    question: "Which method is used to convert a JSON string into a JavaScript object?",
+    answers: [
+      { text: "JSON.parse()", correct: true },
+      { text: "JSON.stringify()", correct: false },
+      { text: "JSON.object()", correct: false },
+      { text: "JSON.convert()", correct: false },
+    ],
+  },
+  {
+    question: "What will be the output of:\n\n```javascript\nconsole.log(10 / 0);\n```",
+    answers: [
+      { text: "Infinity", correct: true },
+      { text: "0", correct: false },
+      { text: "undefined", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which statement is used to stop a loop in JavaScript?",
+    answers: [
+      { text: "break", correct: true },
+      { text: "exit", correct: false },
+      { text: "stop", correct: false },
+      { text: "end", correct: false },
+    ],
+  },
+  {
+    question: "What does `typeof NaN` return?",
+    answers: [
+      { text: "\"number\"", correct: true },
+      { text: "\"NaN\"", correct: false },
+      { text: "\"undefined\"", correct: false },
+      { text: "\"object\"", correct: false },
+    ],
+  },
+  {
+    question: "Which of these will add an element to the end of an array?",
     answers: [
       { text: "push()", correct: true },
       { text: "pop()", correct: false },
       { text: "shift()", correct: false },
       { text: "unshift()", correct: false },
     ],
-  },
-  {
-    question: "Which method is used to remove the last element of an array?",
-    answers: [
-      { text: "pop()", correct: true },
-      { text: "push()", correct: false },
-      { text: "remove()", correct: false },
-      { text: "delete()", correct: false },
-    ],
-  },
-  {
-    question: "What will be the output of: console.log(2 + '2')?",
-    answers: [
-      { text: "'22'", correct: true },
-      { text: "4", correct: false },
-      { text: "NaN", correct: false },
-      { text: "undefined", correct: false },
-    ],
-  },
-  {
-    question: "How do you write a FOR loop in JavaScript?",
-    answers: [
-      { text: "for (let i = 0; i < 5; i++) {}", correct: true },
-      { text: "loop (i < 5; i++) {}", correct: false },
-      { text: "for i = 1 to 5 {}", correct: false },
-      { text: "for each i in 5 {}", correct: false },
-    ],
-  },
-  {
-    question: "Which keyword stops the execution of a loop?",
-    answers: [
-      { text: "stop", correct: false },
-      { text: "halt", correct: false },
-      { text: "break", correct: true },
-      { text: "exit", correct: false },
-    ],
-  },
-  {
-    question: "Which built-in method converts a string to uppercase?",
-    answers: [
-      { text: "toUpperCase()", correct: true },
-      { text: "upperCase()", correct: false },
-      { text: "convertUpper()", correct: false },
-      { text: "makeUpper()", correct: false },
-    ],
-  },
-  {
-    question: "Which method is used to find the length of a string?",
-    answers: [
-      { text: "length", correct: true },
-      { text: "size()", correct: false },
-      { text: "count()", correct: false },
-      { text: "index()", correct: false },
-    ],
-  },
-  {
-    question: "Which HTML element is used to include JavaScript code?",
-    answers: [
-      { text: "<script>", correct: true },
-      { text: "<javascript>", correct: false },
-      { text: "<js>", correct: false },
-      { text: "<code>", correct: false },
-    ],
-  },
-  {
-    question: "How do you print something to the console in JavaScript?",
-    answers: [
-      { text: "console.log()", correct: true },
-      { text: "echo()", correct: false },
-      { text: "print()", correct: false },
-      { text: "document.write()", correct: false },
-    ],
-  },
-  {
-    question: "What does NaN stand for in JavaScript?",
-    answers: [
-      { text: "Not a Number", correct: true },
-      { text: "No assigned Number", correct: false },
-      { text: "Negative and Null", correct: false },
-      { text: "New assigned Name", correct: false },
-    ],
-  },
+  }
 ];
+
+
+
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+const prevButton = document.getElementById("prev-btn");
+
+
+let currentQuestionIndex = 0;
+let score = 0;
+let selectedAnswers = {}; // Store user choices by question index
+
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  selectedAnswers = {};
+  nextButton.innerHTML = "Next";
+  prevButton.style.display = "none";
+  showQuestion();
+}
+
+function showQuestion() {
+  resetState();
+
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNo = currentQuestionIndex + 1;
+  questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+  currentQuestion.answers.forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("answer-btn");
+
+    // If this answer was previously selected, highlight it
+    if (selectedAnswers[currentQuestionIndex] === index) {
+      button.classList.add("selected");
+    }
+
+    button.addEventListener("click", () => selectAnswer(index));
+    answerButtons.appendChild(button);
+  });
+
+  // Show previous button if not on first question
+  prevButton.style.display = currentQuestionIndex > 0 ? "block" : "none";
+  nextButton.style.display = "block";
+}
+
+function resetState() {
+  while (answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
+  }
+}
+
+// When user selects an answer
+function selectAnswer(index) {
+  selectedAnswers[currentQuestionIndex] = index;
+
+  // Remove highlight from all buttons
+  Array.from(answerButtons.children).forEach((button) =>
+    button.classList.remove("selected")
+  );
+
+  // Highlight the clicked one
+  answerButtons.children[index].classList.add("selected");
+}
+
+// When clicking Next
+function handleNextButton() {
+  if (currentQuestionIndex < questions.length - 1) {
+    currentQuestionIndex++;
+    showQuestion();
+  } else {
+    showScore();
+  }
+}
+
+// When clicking Previous
+function handlePrevButton() {
+  if (currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    showQuestion();
+  }
+}
+
+function showScore() {
+  resetState();
+
+  // Calculate score
+  score = 0;
+  questions.forEach((q, i) => {
+    const selectedIndex = selectedAnswers[i];
+    if (selectedIndex !== undefined && q.answers[selectedIndex].correct) {
+      score++;
+    }
+  });
+
+  questionElement.innerHTML = `🎯 You scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+  prevButton.style.display = "none";
+}
+
+nextButton.addEventListener("click", () => {
+  if (nextButton.innerHTML === "Play Again") {
+    startQuiz();
+  } else {
+    handleNextButton();
+  }
+});
+
+prevButton.addEventListener("click", handlePrevButton);
+
+startQuiz();
