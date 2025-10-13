@@ -7,185 +7,185 @@
     }
 const questions = [
   {
-    question: "What will be the output of:\n\n```javascript\nconsole.log(0 == false);\n```",
+    question: "What will be the output of the following code?\n\nconsole.log(typeof NaN);",
     answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "What keyword is used to declare a variable that cannot be reassigned?",
-    answers: [
-      { text: "const", correct: true },
-      { text: "let", correct: false },
-      { text: "var", correct: false },
-      { text: "immutable", correct: false },
-    ],
-  },
-  {
-    question: "What will be logged?\n\n```javascript\nconsole.log(typeof function(){});\n```",
-    answers: [
-      { text: "\"function\"", correct: true },
-      { text: "\"object\"", correct: false },
-      { text: "\"undefined\"", correct: false },
-      { text: "\"string\"", correct: false },
-    ],
-  },
-  {
-    question: "Which method removes the first element from an array?",
-    answers: [
-      { text: "shift()", correct: true },
-      { text: "pop()", correct: false },
-      { text: "splice()", correct: false },
-      { text: "removeFirst()", correct: false },
-    ],
-  },
-  {
-    question: "What will `console.log([] == false)` output?",
-    answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which statement correctly checks if `x` is NOT equal to 5?",
-    answers: [
-      { text: "x !== 5", correct: true },
-      { text: "x !=! 5", correct: false },
-      { text: "x =! 5", correct: false },
-      { text: "x not= 5", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of:\n\n```javascript\nconsole.log('2' + 2 - 1);\n```",
-    answers: [
-      { text: "21", correct: true },
-      { text: "221", correct: false },
+      { text: "number", correct: true },
       { text: "NaN", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which operator checks both value and type equality?",
-    answers: [
-      { text: "===", correct: true },
-      { text: "==", correct: false },
-      { text: "=", correct: false },
-      { text: "!==", correct: false },
-    ],
-  },
-  {
-    question: "How can you find the length of an array named `arr`?",
-    answers: [
-      { text: "arr.length", correct: true },
-      { text: "length(arr)", correct: false },
-      { text: "arr.size()", correct: false },
-      { text: "size(arr)", correct: false },
-    ],
-  },
-  {
-    question: "What does `Math.random()` return?",
-    answers: [
-      { text: "A number between 0 (inclusive) and 1 (exclusive)", correct: true },
-      { text: "An integer between 0 and 10", correct: false },
-      { text: "A random integer", correct: false },
-      { text: "A negative number", correct: false },
-    ],
-  },
-  {
-    question: "What will be logged?\n\n```javascript\nconsole.log(typeof NaN);\n```",
-    answers: [
-      { text: "\"number\"", correct: true },
-      { text: "\"NaN\"", correct: false },
-      { text: "\"undefined\"", correct: false },
-      { text: "\"object\"", correct: false },
-    ],
-  },
-  {
-    question: "Which array method creates a new array with elements that pass a test?",
-    answers: [
-      { text: "filter()", correct: true },
-      { text: "map()", correct: false },
-      { text: "reduce()", correct: false },
-      { text: "find()", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of:\n\n```javascript\nconsole.log('5' == 5);\n```",
-    answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
       { text: "undefined", correct: false },
-      { text: "Error", correct: false },
+      { text: "object", correct: false },
     ],
   },
   {
-    question: "Which keyword is used to define a function in JavaScript?",
+    question: "Which of the following is NOT a primitive data type in JavaScript?",
     answers: [
-      { text: "function", correct: true },
-      { text: "def", correct: false },
-      { text: "func", correct: false },
-      { text: "method", correct: false },
+      { text: "Object", correct: true },
+      { text: "String", correct: false },
+      { text: "Boolean", correct: false },
+      { text: "Number", correct: false },
     ],
   },
   {
-    question: "What will `console.log(typeof null)` output?",
+    question: "What is the result of `[] + []` in JavaScript?",
     answers: [
-      { text: "\"object\"", correct: true },
-      { text: "\"null\"", correct: false },
-      { text: "\"undefined\"", correct: false },
-      { text: "\"boolean\"", correct: false },
-    ],
-  },
-  {
-    question: "Which array method executes a provided function once for each array element?",
-    answers: [
-      { text: "forEach()", correct: true },
-      { text: "map()", correct: false },
-      { text: "reduce()", correct: false },
-      { text: "every()", correct: false },
-    ],
-  },
-  {
-    question: "What will be the result of:\n\n```javascript\nconsole.log(10 % 3);\n```",
-    answers: [
-      { text: "1", correct: true },
-      { text: "3", correct: false },
+      { text: '"" (empty string)', correct: true },
+      { text: "undefined", correct: false },
       { text: "0", correct: false },
-      { text: "NaN", correct: false },
-    ],
-  },
-  {
-    question: "Which statement creates a new object named `car`?",
-    answers: [
-      { text: "let car = {};", correct: true },
-      { text: "let car = [];", correct: false },
-      { text: "let car = ();", correct: false },
-      { text: "object car;", correct: false },
-    ],
-  },
-  {
-    question: "What will `console.log(Boolean(' '))` output?",
-    answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
       { text: "null", correct: false },
     ],
   },
   {
-    question: "Which operator is used to merge strings?",
+    question: "Which method is used to define getters and setters in JavaScript objects?",
     answers: [
-      { text: "+", correct: true },
-      { text: "&", correct: false },
-      { text: "concat", correct: false },
-      { text: "*", correct: false },
+      { text: "Object.defineProperty()", correct: true },
+      { text: "Object.assign()", correct: false },
+      { text: "Object.create()", correct: false },
+      { text: "Object.setPrototypeOf()", correct: false },
     ],
-  }
+  },
+  {
+    question: "What is the output of the following?\n\nconsole.log(0.1 + 0.2 === 0.3);",
+    answers: [
+      { text: "false", correct: true },
+      { text: "true", correct: false },
+      { text: "undefined", correct: false },
+      { text: "TypeError", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following statements about closures is TRUE?",
+    answers: [
+      { text: "They allow inner functions to access outer function variables even after the outer function returns.", correct: true },
+      { text: "They prevent variable access between functions.", correct: false },
+      { text: "They are used only with classes.", correct: false },
+      { text: "They work only in strict mode.", correct: false },
+    ],
+  },
+  {
+    question: "What will the following code print?\n\nconsole.log([] == ![]);",
+    answers: [
+      { text: "true", correct: true },
+      { text: "false", correct: false },
+      { text: "undefined", correct: false },
+      { text: "TypeError", correct: false },
+    ],
+  },
+  {
+    question: "Which statement about 'this' keyword in arrow functions is correct?",
+    answers: [
+      { text: "It refers to the surrounding lexical scope.", correct: true },
+      { text: "It always refers to the global object.", correct: false },
+      { text: "It is redefined when called as a method.", correct: false },
+      { text: "It must be bound explicitly using bind().", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is TRUE about 'async/await' in JavaScript?",
+    answers: [
+      { text: "It is syntactic sugar over Promises.", correct: true },
+      { text: "It blocks the main thread.", correct: false },
+      { text: "It replaces the need for Promises entirely.", correct: false },
+      { text: "It cannot be used with try...catch.", correct: false },
+    ],
+  },
+  {
+    question: "What does the 'new' keyword do in JavaScript?",
+    answers: [
+      { text: "Creates a new object linked to the constructor's prototype.", correct: true },
+      { text: "Creates a global variable.", correct: false },
+      { text: "Invokes the function in strict mode.", correct: false },
+      { text: "Binds the function to the window object.", correct: false },
+    ],
+  },
+  {
+    question: "Which method can be used to freeze an object to prevent modification?",
+    answers: [
+      { text: "Object.freeze()", correct: true },
+      { text: "Object.lock()", correct: false },
+      { text: "Object.seal()", correct: false },
+      { text: "Object.preventChange()", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of the following?\n\nconsole.log(typeof null);",
+    answers: [
+      { text: "object", correct: true },
+      { text: "null", correct: false },
+      { text: "undefined", correct: false },
+      { text: "NaN", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used to spread elements of an array or object?",
+    answers: [
+      { text: "... (spread operator)", correct: true },
+      { text: "=>", correct: false },
+      { text: "&", correct: false },
+      { text: "::", correct: false },
+    ],
+  },
+  {
+    question: "What does the `bind()` method do in JavaScript?",
+    answers: [
+      { text: "Creates a new function with a specific 'this' context.", correct: true },
+      { text: "Immediately invokes a function with a new context.", correct: false },
+      { text: "Copies properties from one object to another.", correct: false },
+      { text: "Prevents context change for methods.", correct: false },
+    ],
+  },
+  {
+    question: "Which JavaScript feature allows destructuring arrays or objects into variables?",
+    answers: [
+      { text: "Destructuring assignment", correct: true },
+      { text: "Tuple unpacking", correct: false },
+      { text: "Dynamic binding", correct: false },
+      { text: "Pattern mapping", correct: false },
+    ],
+  },
+  {
+    question: "What is the result of `'5' - 3` in JavaScript?",
+    answers: [
+      { text: "2", correct: true },
+      { text: "'53'", correct: false },
+      { text: "NaN", correct: false },
+      { text: "'2'", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of this code?\n\nconsole.log([1, 2, 3] + [4, 5, 6]);",
+    answers: [
+      { text: '"1,2,34,5,6"', correct: true },
+      { text: "[1,2,3,4,5,6]", correct: false },
+      { text: "NaN", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which statement correctly describes JavaScript's event loop?",
+    answers: [
+      { text: "It handles asynchronous operations by pushing callbacks to the task queue.", correct: true },
+      { text: "It executes all async tasks in parallel.", correct: false },
+      { text: "It stops execution until async tasks complete.", correct: false },
+      { text: "It executes promises before synchronous code.", correct: false },
+    ],
+  },
+  {
+    question: "Which of these functions returns a Promise?",
+    answers: [
+      { text: "fetch()", correct: true },
+      { text: "JSON.parse()", correct: false },
+      { text: "setTimeout()", correct: false },
+      { text: "eval()", correct: false },
+    ],
+  },
+  {
+    question: "What will `Object.is(NaN, NaN)` return?",
+    answers: [
+      { text: "true", correct: true },
+      { text: "false", correct: false },
+      { text: "undefined", correct: false },
+      { text: "TypeError", correct: false },
+    ],
+  },
 ];
 
 
