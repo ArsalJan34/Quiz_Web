@@ -179,8 +179,9 @@
     }
     /* Creating css for the sections of  languages */
     .html{
-      background: #1e202e;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: #000000;
+ border-bottom: 2px solid #00e09b;
+    border-top: 2px solid #00e09b;  
       width: 100%;
       padding: 20px;
       display:flex;
@@ -209,7 +210,7 @@
 
     }
     .htmlbox p{
-      color: black;
+      color: rgb(252, 252, 252);
       font-size: 30px;
       font-weight: bold;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -257,7 +258,7 @@
     }
   .htmldef{
     font-size: 20px;
-    color: black; 
+    color: rgb(255, 255, 255); 
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
@@ -266,8 +267,9 @@
 
   }
   .css{
-    background:#353147;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    background:#000000;
+      border-bottom: 2px solid #00e09b;
+    border-top: 2px solid #00e09b;  
       width: 100%;
       padding: 20px;
       display:flex;
@@ -293,7 +295,7 @@
 
   }
   .cssbox p{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 30px;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -341,7 +343,7 @@
   }
   .cssdef{
     font-size: 20px;
-    color: black; 
+    color: rgb(255, 255, 255); 
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
@@ -350,8 +352,9 @@
 
   }
   .js{
-    background:#1a3320;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    background:#000000;
+     border-bottom: 2px solid #00e09b;
+    border-top: 2px solid #00e09b;  
       width: 100%;
       padding: 20px;
       display:flex;
@@ -433,8 +436,9 @@
 
   }
 .python{
-    background:#1c2c48;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    background:#000000;
+      border-bottom: 2px solid #00e09b;
+    border-top: 2px solid #00e09b;  
       width: 100%;
       padding: 20px;
       display:flex;
@@ -512,8 +516,9 @@
     padding: 0 10px;
   }
   .java{
-    background: #4B3F72;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #000000;
+      border-bottom: 2px solid #00e09b;
+    border-top: 2px solid #00e09b;  
       width: 100%;
       padding: 20px;
       display:flex;
@@ -535,7 +540,7 @@
     -webkit-text-stroke: 1px rgb(15, 15, 15);
   }
   .javabox p{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 30px;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -584,15 +589,16 @@
   }
   .javadef{
     font-size: 20px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
     padding: 0 10px;
   }
   .cpp{
-    background:#5865F2;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    background:#000000;
+     border-bottom: 2px solid #00e09b;
+    border-top: 2px solid #00e09b;  
       width: 100%;
       padding: 20px;
       display:flex;
@@ -833,7 +839,7 @@
 }
 
 .sidebar .bx-x {
-  color: white;
+  color: rgb(249, 2, 2);
   font-size: 30px;
   margin-bottom: 15px;
 }
@@ -845,10 +851,68 @@
 }
 
 .menu-icon .bx-menu {
-  color: white;
+  color: rgb(255, 230, 0);
   font-size: 32px;
 }
-
+/* python quiz test styles */
+.quiztest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: black;
+}
+  .quiz-container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+      width: 90%;
+      max-width: 600px;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #00ffb0;
+      margin: 20px;
+    }
+    .question {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .answer-btn {
+      display: block;
+      background: #161b22;
+      border: 1px solid #00ffae;
+      border-radius: 8px;
+      padding: 10px 15px;
+      color: #fff;
+      margin: 10px 0;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      max-width: 50%;
+    }
+    .answer-btn:hover {
+      background: #00ffb0;
+      color: #000;
+    }
+    #next-btn {
+      display: none;
+      background: #00ffb0;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #next-btn:hover {
+      background: #00e09b;
+    }
   /* Responsive Design */
 @keyframes slideRight {
   0% { transform: translateX(-100px); opacity: 0; }
