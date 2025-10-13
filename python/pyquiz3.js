@@ -178,7 +178,17 @@ const questions = [
       { text: "{2, 3, 4}", correct: false },
     ],
   },
+  {
+  question: "What will `print([x**2 for x in range(4)])` output?",
+  answers: [
+    { text: "[0, 1, 4, 9]", correct: true },
+    { text: "[1, 4, 9, 16]", correct: false },
+    { text: "[0, 1, 2, 3]", correct: false },
+    { text: "[0, 1, 8, 27]", correct: false },
+  ],
+}
 ];
+
 
   const questionElement = document.getElementById("question");
     const answerButtons = document.getElementById("answer-buttons");
