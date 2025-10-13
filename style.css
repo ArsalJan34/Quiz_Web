@@ -93,7 +93,7 @@
 
 }
 .text1 p{
-  font-size: 30px;
+  font-size: 26px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     align-items: center;
@@ -116,11 +116,13 @@
   font-size: 20px;
   font-weight: bold;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   margin: 10px 0 10px 0;
 
 }
 .testquiz p{
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    font-size: 20px;
+   margin: 10px 0 10px 0;
 }
     .quiz-container {
       background: rgba(255, 255, 255, 0.05);
