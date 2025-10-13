@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrainByte 💻</title>
+  <link rel="stylesheet" href="../style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+     <header class="header">
+    <div class="logo">BrainByte 💻</div>
+    <div class="search-bar">
+      <input class="input" type="text" placeholder="Search..." />
+      <button class="button">Search</button>
+    </div>
+  </header>
+
+  <header class="header2">
+        <nav class="sidebar">
+             <a href="#" onclick="hideSidebar()"><i class='bx bx-x'></i></a>
+                <a href="../index.html" class="active">Home</a>
+                <a href="../python.html">Python</a>
+                <a href="../java.html">Java</a>
+                <a href="../javascript.html">JavaScript</a>
+                <a href="../cpp.html">C++</a>
+                <a href="../html.html">HTML</a>
+                <a href="../css.html">CSS</a>
+         </nav>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../python.html">Python</a></li>
+        <li><a href="../java.html">Java</a></li>
+        <li><a href="../javascript.html">JavaScript</a></li>
+        <li><a href="../cpp.html">C++</a></li>
+        <li><a href="../html.html">HTML</a></li>
+        <li><a href="../css.html">CSS</a></li>
+      </ul>
+    </nav>
+        <div class="menu-icon" onclick="showSidebar()">
+      <a href="#"><i class='bx bx-menu'></i></a>
+    </div>
+  </header>
+<section class="quiztest">
+  <div class="quiz-container">
+    <h1>JavaScript Quiz 2</h1>
+    <div id="quiz">
+      <div id="question-container">
+        <div id="question" class="question"></div>
+        <div id="answer-buttons"></div>
+      </div>
+       <div class="btn-container">
+  <button id="prev-btn">Previous</button>
+  <button id="next-btn">Next</button>
+</div>
+    </div>
+  </div>
+</section>
+  <script src="quiz2js.js"></script>
+
+  
+</body>
+</html>
