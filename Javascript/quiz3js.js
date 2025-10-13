@@ -5,90 +5,9 @@
     function hideSidebar() {
       document.querySelector('.sidebar').classList.remove('show');
     }
- const questions = [
+const questions = [
   {
-    question: "What will be the output of:\n\n```javascript\nlet x;\nconsole.log(x);\n```",
-    answers: [
-      { text: "undefined", correct: true },
-      { text: "null", correct: false },
-      { text: "0", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which keyword is used to skip the current iteration of a loop?",
-    answers: [
-      { text: "continue", correct: true },
-      { text: "break", correct: false },
-      { text: "exit", correct: false },
-      { text: "skip", correct: false },
-    ],
-  },
-  {
-    question: "What will be the output of:\n\n```javascript\nconsole.log(2 === '2');\n```",
-    answers: [
-      { text: "false", correct: true },
-      { text: "true", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "How can you convert a string to an integer in JavaScript?",
-    answers: [
-      { text: "parseInt()", correct: true },
-      { text: "int()", correct: false },
-      { text: "toInt()", correct: false },
-      { text: "Number.string()", correct: false },
-    ],
-  },
-  {
-    question: "Which method removes the last element from an array?",
-    answers: [
-      { text: "pop()", correct: true },
-      { text: "push()", correct: false },
-      { text: "shift()", correct: false },
-      { text: "splice(0)", correct: false },
-    ],
-  },
-  {
-    question: "What will this output?\n\n```javascript\nconsole.log('10' + 10);\n```",
-    answers: [
-      { text: "\"1010\"", correct: true },
-      { text: "\"20\"", correct: false },
-      { text: "\"101\"", correct: false },
-      { text: "NaN", correct: false },
-    ],
-  },
-  {
-    question: "Which built-in function displays a message and waits for user input?",
-    answers: [
-      { text: "prompt()", correct: true },
-      { text: "alert()", correct: false },
-      { text: "confirm()", correct: false },
-      { text: "input()", correct: false },
-    ],
-  },
-  {
-    question: "What is the value of:\n\n```javascript\ntrue && false\n```",
-    answers: [
-      { text: "false", correct: true },
-      { text: "true", correct: false },
-      { text: "undefined", correct: false },
-      { text: "null", correct: false },
-    ],
-  },
-  {
-    question: "Which function returns the largest integer less than or equal to a number?",
-    answers: [
-      { text: "Math.floor()", correct: true },
-      { text: "Math.round()", correct: false },
-      { text: "Math.ceil()", correct: false },
-      { text: "Math.low()", correct: false },
-    ],
-  },
-  {
-    question: "What will be the result of:\n\n```javascript\nconsole.log(1 == true);\n```",
+    question: "What will be the output of:\n\n```javascript\nconsole.log(0 == false);\n```",
     answers: [
       { text: "true", correct: true },
       { text: "false", correct: false },
@@ -97,93 +16,174 @@
     ],
   },
   {
-    question: "Which array method joins all elements into a string?",
+    question: "What keyword is used to declare a variable that cannot be reassigned?",
     answers: [
-      { text: "join()", correct: true },
-      { text: "concat()", correct: false },
-      { text: "combine()", correct: false },
-      { text: "toStringAll()", correct: false },
+      { text: "const", correct: true },
+      { text: "let", correct: false },
+      { text: "var", correct: false },
+      { text: "immutable", correct: false },
     ],
   },
   {
-    question: "What is the output of:\n\n```javascript\nconsole.log(typeof []);\n```",
+    question: "What will be logged?\n\n```javascript\nconsole.log(typeof function(){});\n```",
+    answers: [
+      { text: "\"function\"", correct: true },
+      { text: "\"object\"", correct: false },
+      { text: "\"undefined\"", correct: false },
+      { text: "\"string\"", correct: false },
+    ],
+  },
+  {
+    question: "Which method removes the first element from an array?",
+    answers: [
+      { text: "shift()", correct: true },
+      { text: "pop()", correct: false },
+      { text: "splice()", correct: false },
+      { text: "removeFirst()", correct: false },
+    ],
+  },
+  {
+    question: "What will `console.log([] == false)` output?",
+    answers: [
+      { text: "true", correct: true },
+      { text: "false", correct: false },
+      { text: "undefined", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which statement correctly checks if `x` is NOT equal to 5?",
+    answers: [
+      { text: "x !== 5", correct: true },
+      { text: "x !=! 5", correct: false },
+      { text: "x =! 5", correct: false },
+      { text: "x not= 5", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of:\n\n```javascript\nconsole.log('2' + 2 - 1);\n```",
+    answers: [
+      { text: "21", correct: true },
+      { text: "221", correct: false },
+      { text: "NaN", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which operator checks both value and type equality?",
+    answers: [
+      { text: "===", correct: true },
+      { text: "==", correct: false },
+      { text: "=", correct: false },
+      { text: "!==", correct: false },
+    ],
+  },
+  {
+    question: "How can you find the length of an array named `arr`?",
+    answers: [
+      { text: "arr.length", correct: true },
+      { text: "length(arr)", correct: false },
+      { text: "arr.size()", correct: false },
+      { text: "size(arr)", correct: false },
+    ],
+  },
+  {
+    question: "What does `Math.random()` return?",
+    answers: [
+      { text: "A number between 0 (inclusive) and 1 (exclusive)", correct: true },
+      { text: "An integer between 0 and 10", correct: false },
+      { text: "A random integer", correct: false },
+      { text: "A negative number", correct: false },
+    ],
+  },
+  {
+    question: "What will be logged?\n\n```javascript\nconsole.log(typeof NaN);\n```",
+    answers: [
+      { text: "\"number\"", correct: true },
+      { text: "\"NaN\"", correct: false },
+      { text: "\"undefined\"", correct: false },
+      { text: "\"object\"", correct: false },
+    ],
+  },
+  {
+    question: "Which array method creates a new array with elements that pass a test?",
+    answers: [
+      { text: "filter()", correct: true },
+      { text: "map()", correct: false },
+      { text: "reduce()", correct: false },
+      { text: "find()", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of:\n\n```javascript\nconsole.log('5' == 5);\n```",
+    answers: [
+      { text: "true", correct: true },
+      { text: "false", correct: false },
+      { text: "undefined", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to define a function in JavaScript?",
+    answers: [
+      { text: "function", correct: true },
+      { text: "def", correct: false },
+      { text: "func", correct: false },
+      { text: "method", correct: false },
+    ],
+  },
+  {
+    question: "What will `console.log(typeof null)` output?",
     answers: [
       { text: "\"object\"", correct: true },
-      { text: "\"array\"", correct: false },
-      { text: "\"list\"", correct: false },
+      { text: "\"null\"", correct: false },
       { text: "\"undefined\"", correct: false },
+      { text: "\"boolean\"", correct: false },
     ],
   },
   {
-    question: "Which keyword is used to define a block-scoped variable?",
+    question: "Which array method executes a provided function once for each array element?",
     answers: [
-      { text: "let", correct: true },
-      { text: "var", correct: false },
-      { text: "define", correct: false },
-      { text: "constant", correct: false },
+      { text: "forEach()", correct: true },
+      { text: "map()", correct: false },
+      { text: "reduce()", correct: false },
+      { text: "every()", correct: false },
     ],
   },
   {
-    question: "What will be logged?\n\n```javascript\nconsole.log('5' * 2);\n```",
+    question: "What will be the result of:\n\n```javascript\nconsole.log(10 % 3);\n```",
     answers: [
-      { text: "10", correct: true },
-      { text: "\"52\"", correct: false },
-      { text: "\"10\"", correct: false },
+      { text: "1", correct: true },
+      { text: "3", correct: false },
+      { text: "0", correct: false },
       { text: "NaN", correct: false },
     ],
   },
   {
-    question: "Which function converts a number to a string?",
+    question: "Which statement creates a new object named `car`?",
     answers: [
-      { text: "toString()", correct: true },
-      { text: "stringify()", correct: false },
-      { text: "Stringify()", correct: false },
-      { text: "numToStr()", correct: false },
+      { text: "let car = {};", correct: true },
+      { text: "let car = [];", correct: false },
+      { text: "let car = ();", correct: false },
+      { text: "object car;", correct: false },
     ],
   },
   {
-    question: "What will be the output of:\n\n```javascript\nconsole.log(Boolean(''));\n```",
+    question: "What will `console.log(Boolean(' '))` output?",
     answers: [
-      { text: "false", correct: true },
-      { text: "true", correct: false },
+      { text: "true", correct: true },
+      { text: "false", correct: false },
       { text: "undefined", correct: false },
       { text: "null", correct: false },
     ],
   },
   {
-    question: "Which method adds a new element at the beginning of an array?",
+    question: "Which operator is used to merge strings?",
     answers: [
-      { text: "unshift()", correct: true },
-      { text: "push()", correct: false },
-      { text: "shift()", correct: false },
-      { text: "insert()", correct: false },
-    ],
-  },
-  {
-    question: "What does this expression return?\n\n```javascript\ntypeof NaN === 'number'\n```",
-    answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which operator is used to combine multiple conditions?",
-    answers: [
-      { text: "&&", correct: true },
+      { text: "+", correct: true },
       { text: "&", correct: false },
-      { text: "||", correct: false },
-      { text: "/", correct: false },
-    ],
-  },
-  {
-    question: "What will be the output of:\n\n```javascript\nconsole.log('hello'.toUpperCase());\n```",
-    answers: [
-      { text: "\"HELLO\"", correct: true },
-      { text: "\"hello\"", correct: false },
-      { text: "\"Hello\"", correct: false },
-      { text: "Error", correct: false },
+      { text: "concat", correct: false },
+      { text: "*", correct: false },
     ],
   }
 ];
