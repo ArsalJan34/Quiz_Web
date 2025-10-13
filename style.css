@@ -312,39 +312,7 @@
    flex-direction: column;
    gap: 10px;
   }
-  .buttons .b1{
-    background: #00ffb0;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .buttons .b2{
-    background: #ff5733;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .buttons .b3{
-    font-size: 16px;
-    font-weight: bold;
-    background: #007bff;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
+
   /* .cssdef{
     font-size: 20px;
     color: rgb(255, 255, 255); 
@@ -492,40 +460,7 @@
     flex-direction: column;
     gap: 10px;
   }
-  .buttons .b1{
-    background: #00ffb0;
-    color: #000;
-    border: none;
-    border-radius: 8px;
 
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .buttons .b2{
-    background: #ff5733;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .buttons .b3{
-    font-size: 16px;
-    font-weight: bold;
-    background: #007bff;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;        
-    transition: 0.3s;
-  }
   /* .javadef{
     font-size: 20px;
     color: rgb(255, 255, 255);
