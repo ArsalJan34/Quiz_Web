@@ -1134,13 +1134,14 @@
     padding: 25px;
   }
 
-  .htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
-    font-size: 18px;
-  }
+.htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
+  font-size: 18px;
+}
 
-  .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
-    font-size: 15px;
-  }
+.htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
+  font-size: 15px;
+}
+
 }
 
 /* ================== Smaller devices ================== */
@@ -1179,13 +1180,14 @@
     padding: 18px;
   }
 
-  .htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
-    font-size: 12px;
-  }
+.htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
+  font-size: 12px;
+}
 
-  .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
-    font-size: 10px;
-  }
+.htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
+  font-size: 10px;
+}
+
 
 }
 
@@ -1223,12 +1225,12 @@
  .htmldef, .cssdef, .jsdef, .pydef, .javadef, .cppdef {
     padding: 16px;
   }
+.htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
+  font-size: 10px;
+}
 
-  .htmldef h3, .cssdef h3, .jsdef h3, .pydef h3, .javadef h3, .cppdef h3 {
-    font-size: 10px;
-  }
+.htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
+  font-size: 8px;
+}
 
-  .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
-    font-size: 8px;
-  }
 }
