@@ -797,32 +797,211 @@
     font-size: 40px;
     -webkit-text-stroke: 1px rgb(15, 15, 15);
   }
-  /* Responsive Design */
+  /* Sidebar Styles */
+  .sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 25px;
+  z-index: 999;
+  transition: right 0.4s ease;
+}
 
-  @media (max-width: 600px) {
-    .header, .header2 {
-        flex-direction: column;
-        text-align: center;
-      }
-        .nav-links ul {
-            flex-direction: column;
-            gap: 10px;
-        }
-        .nav-links ul li a {
-            padding: 6px 10px;
-            font-size: 14px;
-        }
-      .quiz-container {
-        padding: 20px;
-      }
-      .question {
-        font-size: 1rem;
-      }
-      .answer-btn {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-      }
-      #next-btn {
-        padding: 8px 16px;
-      }
-    }
+.sidebar.show {
+  right: 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 18px 0;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: gold;
+}
+
+.sidebar .bx-x {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* =============== MENU ICON =============== */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon .bx-menu {
+  color: white;
+  font-size: 32px;
+}
+
+  /* Responsive Design */
+@keyframes slideRight {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideTop {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+/* ================== Sidebar & Menu Responsiveness ================== */
+
+/* Hamburger menu visible on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide normal nav links */
+  }
+
+  .menu-icon {
+    display: block; /* show hamburger menu */
+  }
+
+  /* Sidebar adjustments */
+  .sidebar {
+    right: -260px; /* hidden by default */
+    width: 250px;
+    flex-direction: column;
+    padding: 25px;
+    transition: right 0.4s ease;
+  }
+
+  .sidebar.show {
+    right: 0; /* slide in when active */
+  }
+
+  .sidebar a {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .sidebar .bx-x {
+    font-size: 28px;
+  }
+}
+
+/* ================== Header adjustments for mobile ================== */
+@media (max-width: 600px) {
+  .header, .header2 {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links ul li a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+/* ================== Section scaling for mobile ================== */
+@media (max-width: 768px) {
+  .quiz-container, .intro, .introbox {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .answer-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  #next-btn {
+    padding: 8px 16px;
+  }
+
+  .htmlbox h2, .cssbox h2, .jsbox h2, .pythonbox h2, .javabox h2, .cppbox h2 {
+    font-size: 60px;
+  }
+
+  .htmlbox p, .cssbox p, .jsbox p, .pythonbox p, .javabox p, .cppbox p {
+    font-size: 24px;
+  }
+}
+
+/* ================== Smaller devices ================== */
+@media (max-width: 480px) {
+  .htmlbox h2, .cssbox h2, .jsbox h2, .pythonbox h2, .javabox h2, .cppbox h2 {
+    font-size: 50px;
+  }
+
+  .htmlbox p, .cssbox p, .jsbox p, .pythonbox p, .javabox p, .cppbox p {
+    font-size: 20px;
+  }
+
+  .buttons .b1, .buttons .b2, .buttons .b3 {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .welcomejava h1, .welcomepython h1, .welcomecss h1, .welcomehtml h1, .welcomecpp h1, .welcomejs h1 {
+    font-size: 28px;
+  }
+
+  .quiz-list li {
+    font-size: 18px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .start-button, .clickb {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* ================== Very small phones ================== */
+@media (max-width: 360px) {
+  .htmlbox h2, .cssbox h2, .jsbox h2, .pythonbox h2, .javabox h2, .cppbox h2 {
+    font-size: 40px;
+  }
+
+  .htmlbox p, .cssbox p, .jsbox p, .pythonbox p, .javabox p, .cppbox p {
+    font-size: 16px;
+  }
+
+  .buttons .b1, .buttons .b2, .buttons .b3 {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .welcomejava h1, .welcomepython h1, .welcomecss h1, .welcomehtml h1, .welcomecpp h1, .welcomejs h1 {
+    font-size: 24px;
+  }
+
+  .quiz-container, .intro, .introbox {
+    padding: 15px;
+  }
+
+  .answer-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  #next-btn {
+    padding: 6px 12px;
+  }
+}

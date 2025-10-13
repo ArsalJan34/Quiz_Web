@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   <title>JavaScript Quiz Challenge</title>
-  
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -16,9 +16,19 @@
         </div>
     </header>
     <header class="header2">
+         <nav class="sidebar">
+             <a href="#" onclick="hideSidebar()"><i class='bx bx-x'></i></a>
+                <a href="#" class="active">Home</a>
+                <a href="./python.html">Python</a>
+                <a href="./java.html">Java</a>
+                <a href="./javascript.html">JavaScript</a>
+                <a href="./cpp.html">C++</a>
+                <a href="./html.html">HTML</a>
+                <a href="./css.html">CSS</a>
+         </nav>
         <nav class="nav-links">
             <ul>
-                       <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./python.html">Python</a></li>
                 <li><a href="./java.html">Java</a></li>
                 <li><a href="./javascript.html">JavaScript</a></li>
@@ -27,6 +37,9 @@
                 <li><a href="./css.html">CSS</a></li>
             </ul>
         </nav>
+          <div class="menu-icon" onclick="showSidebar()">
+      <a href="#"><i class='bx bx-menu'></i></a>
+    </div>
     </header>
 <section class="introbox">
     <div class ="intro">
