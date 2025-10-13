@@ -95,10 +95,20 @@
 .text1 p{
   font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom:2px solid #00cc8a;
+    border-top:2px solid #00cc8a;
 }
 .testquiz{
-  border-bottom: 2px solid rgb(135, 121, 121);
-  border-top: 2px solid rgb(135, 121, 121);
+  border-bottom: 2px solid #00cc8a;
+  border-top: 2px solid #00cc8a;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  
 
 }
 .testquiz h4{
