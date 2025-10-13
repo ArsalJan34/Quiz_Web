@@ -993,9 +993,7 @@
   .sidebar .bx-x {
     font-size: 28px;
   }
-  .footer-links a{
-  font-size: 16px;
-}
+
  .htmldef, .cssdef, .jsdef, .pydef, .javadef, .cppdef {
     padding: 20px;
   }
@@ -1056,9 +1054,7 @@
   .htmlbox p, .cssbox p, .jsbox p, .pythonbox p, .javabox p, .cppbox p {
     font-size: 24px;
   }
-  .footer-links a{
-  font-size: 12px;
-}
+
  .htmldef, .cssdef, .jsdef, .pydef, .javadef, .cppdef {
     padding: 25px;
   }
@@ -1102,9 +1098,6 @@
     font-size: 14px;
     padding: 8px 12px;
   }
-  .footer-links a{
-  font-size: 10px;
-}
  .htmldef, .cssdef, .jsdef, .pydef, .javadef, .cppdef {
     padding: 18px;
   }
@@ -1116,8 +1109,26 @@
 .htmldef p, .cssdef p, .jsdef p, .pydef p, .javadef p, .cppdef p {
   font-size: 10px;
 }
-
-
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.footer-content{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.footer-links{
+display: flex;
+  flex-direction: column;
+}
+.socials{
+  display: none;
 }
 
 /* ================== Very small phones ================== */
