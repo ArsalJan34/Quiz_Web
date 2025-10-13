@@ -6,6 +6,7 @@
       list-style: none;
       margin: 0;
       padding: 0;
+
     }
     html {
   scroll-behavior: smooth;
@@ -606,7 +607,11 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.quiz-list li a{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .start-button{
   background: #00ffb0;
@@ -618,7 +623,7 @@
   transition: 0.3s;
   font-size: 16px;
   font-weight: bold;
-  margin-top: 20px;
+  margin: 10px 0 10px 0;
 }
 
 /* Python Quiz Styles */
@@ -1172,4 +1177,5 @@ display: flex;
   font-size: 8px;
 }
 
+}
 }
