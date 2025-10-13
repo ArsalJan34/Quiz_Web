@@ -195,107 +195,108 @@ const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const prevButton = document.getElementById("prev-btn");
 
-/* ---------------- State ---------------- */
-let currentQuestionIndex = 0;
-let selectedAnswers = {}; // { questionIndex: answerIndex }
 
-/* ---------------- Start ---------------- */
-startQuiz();
+let currentQuestionIndex = 0;
+let score = 0;
+let selectedAnswers = {}; // Store user choices by question index
 
 function startQuiz() {
   currentQuestionIndex = 0;
+  score = 0;
   selectedAnswers = {};
-  nextButton.textContent = "Next";
+  nextButton.innerHTML = "Next";
   prevButton.style.display = "none";
   showQuestion();
 }
 
-/* ---------------- Show question ---------------- */
 function showQuestion() {
-  // clear existing answers
-  while (answerButtons.firstChild) answerButtons.removeChild(answerButtons.firstChild);
+  resetState();
 
-  const q = questions[currentQuestionIndex];
-  if (!q) {
-    console.error("No question found at index", currentQuestionIndex);
-    return;
-  }
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNo = currentQuestionIndex + 1;
+  questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-  questionElement.textContent = `${currentQuestionIndex + 1}. ${q.question}`;
+  currentQuestion.answers.forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("answer-btn");
 
-  // create answer buttons
-  q.answers.forEach((ans, i) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "answer-btn";
-    btn.textContent = typeof ans.text === "string" ? ans.text : String(ans.text);
-    btn.dataset.index = i; // store index on button
-    btn.addEventListener("click", onAnswerClick);
-    answerButtons.appendChild(btn);
-
-    // if user already selected this answer earlier, mark it
-    if (selectedAnswers[currentQuestionIndex] === i) {
-      btn.classList.add("selected");
+    // If this answer was previously selected, highlight it
+    if (selectedAnswers[currentQuestionIndex] === index) {
+      button.classList.add("selected");
     }
+
+    button.addEventListener("click", () => selectAnswer(index));
+    answerButtons.appendChild(button);
   });
 
-  // previous button visible only after first question
+  // Show previous button if not on first question
   prevButton.style.display = currentQuestionIndex > 0 ? "block" : "none";
+  nextButton.style.display = "block";
 }
 
-/* ---------------- Answer click handler ---------------- */
-function onAnswerClick(e) {
-  const btn = e.currentTarget;
-  const idxStr = btn.dataset.index;
-  if (typeof idxStr === "undefined") return;
-  const idx = parseInt(idxStr, 10);
-
-  // store selection
-  selectedAnswers[currentQuestionIndex] = idx;
-
-  // remove selected class from all and add to clicked
-  Array.from(answerButtons.children).forEach((b) => b.classList.remove("selected"));
-  btn.classList.add("selected");
-}
-
-/* ---------------- Navigation ---------------- */
-nextButton.addEventListener("click", () => {
-  if (nextButton.textContent === "Play Again") {
-    startQuiz();
-    return;
+function resetState() {
+  while (answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
   }
+}
 
-  // if not last question, go next. If last, show score.
+// When user selects an answer
+function selectAnswer(index) {
+  selectedAnswers[currentQuestionIndex] = index;
+
+  // Remove highlight from all buttons
+  Array.from(answerButtons.children).forEach((button) =>
+    button.classList.remove("selected")
+  );
+
+  // Highlight the clicked one
+  answerButtons.children[index].classList.add("selected");
+}
+
+// When clicking Next
+function handleNextButton() {
   if (currentQuestionIndex < questions.length - 1) {
     currentQuestionIndex++;
     showQuestion();
   } else {
     showScore();
   }
-});
+}
 
-prevButton.addEventListener("click", () => {
+// When clicking Previous
+function handlePrevButton() {
   if (currentQuestionIndex > 0) {
     currentQuestionIndex--;
     showQuestion();
   }
-});
+}
 
-/* ---------------- Score ---------------- */
 function showScore() {
-  // ensure we clear answers area
-  while (answerButtons.firstChild) answerButtons.removeChild(answerButtons.firstChild);
+  resetState();
 
-  // calculate score
-  let score = 0;
-  for (let i = 0; i < questions.length; i++) {
-    const sel = selectedAnswers[i];
-    if (typeof sel === "number" && questions[i].answers[sel] && questions[i].answers[sel].correct) {
+  // Calculate score
+  score = 0;
+  questions.forEach((q, i) => {
+    const selectedIndex = selectedAnswers[i];
+    if (selectedIndex !== undefined && q.answers[selectedIndex].correct) {
       score++;
     }
-  }
+  });
 
-  questionElement.textContent = `🎯 You scored ${score} out of ${questions.length}!`;
-  nextButton.textContent = "Play Again";
+  questionElement.innerHTML = `🎯 You scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
   prevButton.style.display = "none";
 }
+
+nextButton.addEventListener("click", () => {
+  if (nextButton.innerHTML === "Play Again") {
+    startQuiz();
+  } else {
+    handleNextButton();
+  }
+});
+
+prevButton.addEventListener("click", handlePrevButton);
+
+startQuiz();
