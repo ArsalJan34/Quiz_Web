@@ -14,7 +14,7 @@
 
     body {
       background: black;
-      
+
       color: #fff;
       margin: 0;
       padding: 0;
@@ -107,7 +107,7 @@
   flex-direction: column;
   align-content: center;
   padding: 5px;
-  
+
 
 }
 .testquiz h4{
@@ -223,26 +223,26 @@
     .html{
       background: #000000;
  border-bottom: 2px solid #00e09b;
-    border-top: 2px solid #00e09b;  
+    border-top: 2px solid #00e09b;
       width: 100%;
       padding: 20px;
       display:flex;
       justify-content: space-between;
       align-items: center;
       justify-items: center;
-      
 
-      
+
+
 
     }
-    
+
     .htmlbox{
       display: inline-block;
       margin: 20px;
       padding:20px;
       text-align: center;
 
-      
+
     }
     .htmlbox h2{
       color: #ff5733;
@@ -301,7 +301,7 @@
     }
   .htmldef, .cssdef, .jsdef, .cppdef, .pydef, .javadef{
     font-size: 20px;
-    color: rgb(255, 255, 255); 
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0px;
@@ -311,7 +311,7 @@
   .css{
     background:#000000;
       border-bottom: 2px solid #00e09b;
-    border-top: 2px solid #00e09b;  
+    border-top: 2px solid #00e09b;
       width: 100%;
       padding: 20px;
       display:flex;
@@ -326,7 +326,7 @@
     padding:20px;
     text-align: center;
 
-    
+
   }
   .cssbox h2{
     color: #007bff;
@@ -353,18 +353,18 @@
 
   /* .cssdef{
     font-size: 20px;
-    color: rgb(255, 255, 255); 
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
-    
+
     padding: 0 10px;
 
   } */
   .js{
     background:#000000;
      border-bottom: 2px solid #00e09b;
-    border-top: 2px solid #00e09b;  
+    border-top: 2px solid #00e09b;
       width: 100%;
       padding: 20px;
       display:flex;
@@ -378,7 +378,7 @@
     padding:20px;
     text-align: center;
 
-    
+
   }
   .jsbox h2{
     color: #ffdd00;
@@ -404,24 +404,24 @@
   }
   /* .jsdef{
     font-size: 20px;
-    color: white; 
+    color: white;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 10px 0;
-    
+
     padding: 0 10px;
 
   } */
 .python{
     background:#000000;
       border-bottom: 2px solid #00e09b;
-    border-top: 2px solid #00e09b;  
+    border-top: 2px solid #00e09b;
       width: 100%;
       padding: 20px;
       display:flex;
       justify-content: space-between;
       align-items: center;
-      justify-items: center;    
+      justify-items: center;
       flex-direction: row-reverse;
   }
   .pythonbox{
@@ -463,16 +463,16 @@
   .java{
     background: #000000;
       border-bottom: 2px solid #00e09b;
-    border-top: 2px solid #00e09b;  
+    border-top: 2px solid #00e09b;
       width: 100%;
       padding: 20px;
       display:flex;
       justify-content: space-between;
       align-items: center;
-      justify-items: center;    
+      justify-items: center;
   }
   .javabox{
-    display: inline-block;            
+    display: inline-block;
     margin: 20px;
     padding:20px;
     text-align: center;
@@ -510,13 +510,13 @@
   .cpp{
     background:#000000;
      border-bottom: 2px solid #00e09b;
-    border-top: 2px solid #00e09b;  
+    border-top: 2px solid #00e09b;
       width: 100%;
       padding: 20px;
       display:flex;
       justify-content: space-between;
       align-items: center;
-      justify-items: center;    
+      justify-items: center;
       flex-direction: row-reverse;
   }
   .cppbox{
@@ -628,7 +628,7 @@
 
 /* Python Quiz Styles */
 .welcomepython{
-    display: flex;  
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -729,7 +729,7 @@
     bottom: 0;
     width: 100%;
     border-top: 2px solid #00e09b;
-  
+
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
@@ -757,7 +757,7 @@
     padding: 8px 12px;
     border-radius: 8px;
     font-weight: bold;
-    
+
 
   }
       .footer-links a:hover {
@@ -918,6 +918,24 @@
 #next-btn:hover {
   background: #00cc8a;
   transform: translateY(-1px);
+}
+/* About styles */
+.welcomeabout, .contactabout, .missionabout, .offerabout, .chooseabout, .visionabout {
+    padding: 10px;
+
+}
+.welcomeabout h2,
+.contactabout h2,
+.missionabout h2,
+.offerabout h2,
+.chooseabout h2,
+.visionabout h2{
+  margin: 10px 0 10px 0;
+}
+
+.offerabout strong{
+ color: white;
+
 }
 /* Default visibility (for desktops/laptops) */
 .mobile-only {
