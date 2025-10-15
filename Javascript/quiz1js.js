@@ -5,7 +5,7 @@
     function hideSidebar() {
       document.querySelector('.sidebar').classList.remove('show');
     }
-   
+
 const questions = [
   {
     question: "What will be the output of:\n\n```javascript\nconsole.log(typeof 42);\n```",
