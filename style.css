@@ -937,6 +937,15 @@
  color: white;
 
 }
+/* privay policy styles */
+.homepp {
+  padding: 10px;
+}
+.privacysec1 h2, .privacysec2 h2, .privacysec3 h2, .privacysec4 h2,
+.privacysec4 h2, .privacysec5 h2, .privacysec6 h2, .privacysec7 h2,
+.privacysec8 h2, .privacysec9 h2{
+  margin: 10px 0 10px 0;
+}
 /* Default visibility (for desktops/laptops) */
 .mobile-only {
   display: none;
