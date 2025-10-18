@@ -5,189 +5,189 @@
     function hideSidebar() {
       document.querySelector('.sidebar').classList.remove('show');
     }
-const javaQuestionsLevel2 = [
+
+const questions = [
   {
-    question: "Which keyword is used for conditional branching in Java?",
+    question: "What is the correct file extension for Python files?",
+    answers: [
+      { text: ".py", correct: true },
+      { text: ".python", correct: false },
+      { text: ".pt", correct: false },
+      { text: ".pyt", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to define a function in Python?",
+    answers: [
+      { text: "def", correct: true },
+      { text: "function", correct: false },
+      { text: "func", correct: false },
+      { text: "define", correct: false },
+    ],
+  },
+  {
+    question: "How do you insert a comment in Python?",
+    answers: [
+      { text: "# This is a comment", correct: true },
+      { text: "// This is a comment", correct: false },
+      { text: "<!-- This is a comment -->", correct: false },
+      { text: "/* This is a comment */", correct: false },
+    ],
+  },
+  {
+    question: "Which of these is a valid variable name in Python?",
+    answers: [
+      { text: "my_var", correct: true },
+      { text: "2var", correct: false },
+      { text: "my-var", correct: false },
+      { text: "my var", correct: false },
+    ],
+  },
+  {
+    question: "What is the correct way to output 'Hello World' in Python?",
+    answers: [
+      { text: "print('Hello World')", correct: true },
+      { text: "echo 'Hello World'", correct: false },
+      { text: "printf('Hello World')", correct: false },
+      { text: "console.log('Hello World')", correct: false },
+    ],
+  },
+  {
+    question: "Which of these is a Python data type?",
+    answers: [
+      { text: "int", correct: true },
+      { text: "integer", correct: false },
+      { text: "number", correct: false },
+      { text: "digit", correct: false },
+    ],
+  },
+  {
+    question: "How do you create a list in Python?",
+    answers: [
+      { text: "my_list = [1, 2, 3]", correct: true },
+      { text: "my_list = (1, 2, 3)", correct: false },
+      { text: "my_list = {1, 2, 3}", correct: false },
+      { text: "my_list = <1, 2, 3>", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used for exponentiation in Python?",
+    answers: [
+      { text: "**", correct: true },
+      { text: "^", correct: false },
+      { text: "%", correct: false },
+      { text: "exp()", correct: false },
+    ],
+  },
+  {
+    question: "What will `len('Python')` return?",
+    answers: [
+      { text: "6", correct: true },
+      { text: "5", correct: false },
+      { text: "7", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to create a class in Python?",
+    answers: [
+      { text: "class", correct: true },
+      { text: "Class", correct: false },
+      { text: "def", correct: false },
+      { text: "object", correct: false },
+    ],
+  },
+  {
+    question: "What is the correct syntax to create a dictionary in Python?",
+    answers: [
+      { text: "my_dict = {'key': 'value'}", correct: true },
+      { text: "my_dict = ['key', 'value']", correct: false },
+      { text: "my_dict = ('key': 'value')", correct: false },
+      { text: "my_dict = {key, value}", correct: false },
+    ],
+  },
+  {
+    question: "How do you start a while loop in Python?",
+    answers: [
+      { text: "while condition:", correct: true },
+      { text: "while (condition) {}", correct: false },
+      { text: "loop while condition", correct: false },
+      { text: "while condition {}", correct: false },
+    ],
+  },
+  {
+    question: "Which Python keyword is used for conditional statements?",
     answers: [
       { text: "if", correct: true },
-      { text: "when", correct: false },
-      { text: "switch", correct: false },
-      { text: "case", correct: false },
-    ],
-  },
-  {
-    question: "Which of these loops executes at least once regardless of the condition?",
-    answers: [
-      { text: "do-while", correct: true },
-      { text: "while", correct: false },
       { text: "for", correct: false },
-      { text: "foreach", correct: false },
+      { text: "loop", correct: false },
+      { text: "switch", correct: false },
     ],
   },
   {
-    question: "What is the correct syntax for a for loop in Java?",
+    question: "Which function converts a string to an integer in Python?",
     answers: [
-      { text: "for(initialization; condition; update)", correct: true },
-      { text: "for(condition; update; initialization)", correct: false },
-      { text: "loop(condition)", correct: false },
-      { text: "for variable in range", correct: false },
+      { text: "int()", correct: true },
+      { text: "str()", correct: false },
+      { text: "float()", correct: false },
+      { text: "integer()", correct: false },
     ],
   },
   {
-    question: "Which operator is used to compare two values in Java?",
+    question: "How do you check the type of a variable in Python?",
     answers: [
-      { text: "==", correct: true },
-      { text: "=", correct: false },
-      { text: "===", correct: false },
-      { text: "equals", correct: false },
+      { text: "type(variable)", correct: true },
+      { text: "typeof(variable)", correct: false },
+      { text: "checktype(variable)", correct: false },
+      { text: "var.type()", correct: false },
     ],
   },
   {
-    question: "Which of these operators is used for logical AND?",
+    question: "Which of these is a Python boolean value?",
     answers: [
-      { text: "&&", correct: true },
-      { text: "&", correct: false },
-      { text: "and", correct: false },
-      { text: "||", correct: false },
-    ],
-  },
-  {
-    question: "Which statement is used to stop the loop prematurely?",
-    answers: [
-      { text: "break", correct: true },
-      { text: "exit", correct: false },
-      { text: "stop", correct: false },
-      { text: "return", correct: false },
-    ],
-  },
-  {
-    question: "Which statement is used to skip the current iteration of a loop?",
-    answers: [
-      { text: "continue", correct: true },
-      { text: "skip", correct: false },
-      { text: "next", correct: false },
-      { text: "break", correct: false },
-    ],
-  },
-  {
-    question: "Which data type is used to represent characters in Java?",
-    answers: [
-      { text: "char", correct: true },
-      { text: "string", correct: false },
-      { text: "character", correct: false },
-      { text: "text", correct: false },
-    ],
-  },
-  {
-    question: "Which of these is not a valid access modifier in Java?",
-    answers: [
-      { text: "protected", correct: false },
-      { text: "internal", correct: true },
-      { text: "public", correct: false },
-      { text: "private", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following is a ternary operator?",
-    answers: [
-      { text: "?:", correct: true },
-      { text: "++", correct: false },
-      { text: "--", correct: false },
-      { text: "**", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of 10 % 3 in Java?",
-    answers: [
-      { text: "1", correct: true },
-      { text: "3", correct: false },
-      { text: "0", correct: false },
-      { text: "10", correct: false },
-    ],
-  },
-  {
-    question: "What is the default value of a boolean variable in Java?",
-    answers: [
-      { text: "false", correct: true },
+      { text: "True", correct: true },
       { text: "true", correct: false },
-      { text: "0", correct: false },
-      { text: "null", correct: false },
+      { text: "TRUE", correct: false },
+      { text: "yes", correct: false },
     ],
   },
   {
-    question: "Which loop is best used when the number of iterations is known?",
+    question: "Which of these keywords is used to handle exceptions?",
     answers: [
-      { text: "for", correct: true },
-      { text: "while", correct: false },
-      { text: "do-while", correct: false },
-      { text: "recursive", correct: false },
+      { text: "try", correct: true },
+      { text: "catch", correct: false },
+      { text: "except()", correct: false },
+      { text: "error", correct: false },
     ],
   },
   {
-    question: "What is the output of System.out.println(5 + 2 * 3)?",
+    question: "Which symbol is used for floor division in Python?",
     answers: [
-      { text: "11", correct: true },
-      { text: "21", correct: false },
-      { text: "17", correct: false },
-      { text: "10", correct: false },
+      { text: "//", correct: true },
+      { text: "/", correct: false },
+      { text: "%", correct: false },
+      { text: "div", correct: false },
     ],
   },
   {
-    question: "Which statement defines an array correctly?",
+    question: "Which keyword is used to import modules in Python?",
     answers: [
-      { text: "int[] numbers = new int[5];", correct: true },
-      { text: "int numbers[] = (5);", correct: false },
-      { text: "int numbers = [5];", correct: false },
-      { text: "array numbers = new int(5);", correct: false },
+      { text: "import", correct: true },
+      { text: "include", correct: false },
+      { text: "using", correct: false },
+      { text: "require", correct: false },
     ],
   },
   {
-    question: "Which method returns the length of an array?",
+    question: "What is the output of `print(2 * 3 ** 2)`?",
     answers: [
-      { text: "array.length", correct: true },
-      { text: "array.size()", correct: false },
-      { text: "array.length()", correct: false },
-      { text: "array.count()", correct: false },
-    ],
-  },
-  {
-    question: "Which operator is used to perform logical OR in Java?",
-    answers: [
-      { text: "||", correct: true },
-      { text: "or", correct: false },
-      { text: "|", correct: false },
-      { text: "&", correct: false },
-    ],
-  },
-  {
-    question: "What does '==' do when used with primitive types?",
-    answers: [
-      { text: "Compares their values", correct: true },
-      { text: "Compares their memory addresses", correct: false },
-      { text: "Compares their type", correct: false },
-      { text: "Converts them to strings", correct: false },
-    ],
-  },
-  {
-    question: "Which keyword is used to execute different code based on multiple conditions?",
-    answers: [
-      { text: "switch", correct: true },
-      { text: "case", correct: false },
-      { text: "choose", correct: false },
-      { text: "ifelse", correct: false },
-    ],
-  },
-  {
-    question: "Which symbol is used to concatenate strings in Java?",
-    answers: [
-      { text: "+", correct: true },
-      { text: "&", correct: false },
-      { text: "concat", correct: false },
-      { text: "&&", correct: false },
+      { text: "18", correct: true },
+      { text: "36", correct: false },
+      { text: "12", correct: false },
+      { text: "9", correct: false },
     ],
   },
 ];
-
 
 
 const questionElement = document.getElementById("question");

@@ -5,190 +5,189 @@
     function hideSidebar() {
       document.querySelector('.sidebar').classList.remove('show');
     }
+
 const questions = [
   {
-    question: "What will be the output of the following code?\n\nconsole.log(typeof NaN);",
+    question: "What is the correct file extension for Python files?",
     answers: [
-      { text: "number", correct: true },
-      { text: "NaN", correct: false },
-      { text: "undefined", correct: false },
-      { text: "object", correct: false },
+      { text: ".py", correct: true },
+      { text: ".python", correct: false },
+      { text: ".pt", correct: false },
+      { text: ".pyt", correct: false },
     ],
   },
   {
-    question: "Which of the following is NOT a primitive data type in JavaScript?",
+    question: "Which keyword is used to define a function in Python?",
     answers: [
-      { text: "Object", correct: true },
-      { text: "String", correct: false },
-      { text: "Boolean", correct: false },
-      { text: "Number", correct: false },
+      { text: "def", correct: true },
+      { text: "function", correct: false },
+      { text: "func", correct: false },
+      { text: "define", correct: false },
     ],
   },
   {
-    question: "What is the result of `[] + []` in JavaScript?",
+    question: "How do you insert a comment in Python?",
     answers: [
-      { text: '"" (empty string)', correct: true },
-      { text: "undefined", correct: false },
-      { text: "0", correct: false },
-      { text: "null", correct: false },
+      { text: "# This is a comment", correct: true },
+      { text: "// This is a comment", correct: false },
+      { text: "<!-- This is a comment -->", correct: false },
+      { text: "/* This is a comment */", correct: false },
     ],
   },
   {
-    question: "Which method is used to define getters and setters in JavaScript objects?",
+    question: "Which of these is a valid variable name in Python?",
     answers: [
-      { text: "Object.defineProperty()", correct: true },
-      { text: "Object.assign()", correct: false },
-      { text: "Object.create()", correct: false },
-      { text: "Object.setPrototypeOf()", correct: false },
+      { text: "my_var", correct: true },
+      { text: "2var", correct: false },
+      { text: "my-var", correct: false },
+      { text: "my var", correct: false },
     ],
   },
   {
-    question: "What is the output of the following?\n\nconsole.log(0.1 + 0.2 === 0.3);",
+    question: "What is the correct way to output 'Hello World' in Python?",
     answers: [
-      { text: "false", correct: true },
-      { text: "true", correct: false },
-      { text: "undefined", correct: false },
-      { text: "TypeError", correct: false },
+      { text: "print('Hello World')", correct: true },
+      { text: "echo 'Hello World'", correct: false },
+      { text: "printf('Hello World')", correct: false },
+      { text: "console.log('Hello World')", correct: false },
     ],
   },
   {
-    question: "Which of the following statements about closures is TRUE?",
+    question: "Which of these is a Python data type?",
     answers: [
-      { text: "They allow inner functions to access outer function variables even after the outer function returns.", correct: true },
-      { text: "They prevent variable access between functions.", correct: false },
-      { text: "They are used only with classes.", correct: false },
-      { text: "They work only in strict mode.", correct: false },
+      { text: "int", correct: true },
+      { text: "integer", correct: false },
+      { text: "number", correct: false },
+      { text: "digit", correct: false },
     ],
   },
   {
-    question: "What will the following code print?\n\nconsole.log([] == ![]);",
+    question: "How do you create a list in Python?",
     answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
-      { text: "TypeError", correct: false },
+      { text: "my_list = [1, 2, 3]", correct: true },
+      { text: "my_list = (1, 2, 3)", correct: false },
+      { text: "my_list = {1, 2, 3}", correct: false },
+      { text: "my_list = <1, 2, 3>", correct: false },
     ],
   },
   {
-    question: "Which statement about 'this' keyword in arrow functions is correct?",
+    question: "Which operator is used for exponentiation in Python?",
     answers: [
-      { text: "It refers to the surrounding lexical scope.", correct: true },
-      { text: "It always refers to the global object.", correct: false },
-      { text: "It is redefined when called as a method.", correct: false },
-      { text: "It must be bound explicitly using bind().", correct: false },
+      { text: "**", correct: true },
+      { text: "^", correct: false },
+      { text: "%", correct: false },
+      { text: "exp()", correct: false },
     ],
   },
   {
-    question: "Which of the following is TRUE about 'async/await' in JavaScript?",
+    question: "What will `len('Python')` return?",
     answers: [
-      { text: "It is syntactic sugar over Promises.", correct: true },
-      { text: "It blocks the main thread.", correct: false },
-      { text: "It replaces the need for Promises entirely.", correct: false },
-      { text: "It cannot be used with try...catch.", correct: false },
-    ],
-  },
-  {
-    question: "What does the 'new' keyword do in JavaScript?",
-    answers: [
-      { text: "Creates a new object linked to the constructor's prototype.", correct: true },
-      { text: "Creates a global variable.", correct: false },
-      { text: "Invokes the function in strict mode.", correct: false },
-      { text: "Binds the function to the window object.", correct: false },
-    ],
-  },
-  {
-    question: "Which method can be used to freeze an object to prevent modification?",
-    answers: [
-      { text: "Object.freeze()", correct: true },
-      { text: "Object.lock()", correct: false },
-      { text: "Object.seal()", correct: false },
-      { text: "Object.preventChange()", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of the following?\n\nconsole.log(typeof null);",
-    answers: [
-      { text: "object", correct: true },
-      { text: "null", correct: false },
-      { text: "undefined", correct: false },
-      { text: "NaN", correct: false },
-    ],
-  },
-  {
-    question: "Which operator is used to spread elements of an array or object?",
-    answers: [
-      { text: "... (spread operator)", correct: true },
-      { text: "=>", correct: false },
-      { text: "&", correct: false },
-      { text: "::", correct: false },
-    ],
-  },
-  {
-    question: "What does the `bind()` method do in JavaScript?",
-    answers: [
-      { text: "Creates a new function with a specific 'this' context.", correct: true },
-      { text: "Immediately invokes a function with a new context.", correct: false },
-      { text: "Copies properties from one object to another.", correct: false },
-      { text: "Prevents context change for methods.", correct: false },
-    ],
-  },
-  {
-    question: "Which JavaScript feature allows destructuring arrays or objects into variables?",
-    answers: [
-      { text: "Destructuring assignment", correct: true },
-      { text: "Tuple unpacking", correct: false },
-      { text: "Dynamic binding", correct: false },
-      { text: "Pattern mapping", correct: false },
-    ],
-  },
-  {
-    question: "What is the result of `'5' - 3` in JavaScript?",
-    answers: [
-      { text: "2", correct: true },
-      { text: "'53'", correct: false },
-      { text: "NaN", correct: false },
-      { text: "'2'", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of this code?\n\nconsole.log([1, 2, 3] + [4, 5, 6]);",
-    answers: [
-      { text: '"1,2,34,5,6"', correct: true },
-      { text: "[1,2,3,4,5,6]", correct: false },
-      { text: "NaN", correct: false },
+      { text: "6", correct: true },
+      { text: "5", correct: false },
+      { text: "7", correct: false },
       { text: "Error", correct: false },
     ],
   },
   {
-    question: "Which statement correctly describes JavaScript's event loop?",
+    question: "Which keyword is used to create a class in Python?",
     answers: [
-      { text: "It handles asynchronous operations by pushing callbacks to the task queue.", correct: true },
-      { text: "It executes all async tasks in parallel.", correct: false },
-      { text: "It stops execution until async tasks complete.", correct: false },
-      { text: "It executes promises before synchronous code.", correct: false },
+      { text: "class", correct: true },
+      { text: "Class", correct: false },
+      { text: "def", correct: false },
+      { text: "object", correct: false },
     ],
   },
   {
-    question: "Which of these functions returns a Promise?",
+    question: "What is the correct syntax to create a dictionary in Python?",
     answers: [
-      { text: "fetch()", correct: true },
-      { text: "JSON.parse()", correct: false },
-      { text: "setTimeout()", correct: false },
-      { text: "eval()", correct: false },
+      { text: "my_dict = {'key': 'value'}", correct: true },
+      { text: "my_dict = ['key', 'value']", correct: false },
+      { text: "my_dict = ('key': 'value')", correct: false },
+      { text: "my_dict = {key, value}", correct: false },
     ],
   },
   {
-    question: "What will `Object.is(NaN, NaN)` return?",
+    question: "How do you start a while loop in Python?",
     answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
-      { text: "TypeError", correct: false },
+      { text: "while condition:", correct: true },
+      { text: "while (condition) {}", correct: false },
+      { text: "loop while condition", correct: false },
+      { text: "while condition {}", correct: false },
+    ],
+  },
+  {
+    question: "Which Python keyword is used for conditional statements?",
+    answers: [
+      { text: "if", correct: true },
+      { text: "for", correct: false },
+      { text: "loop", correct: false },
+      { text: "switch", correct: false },
+    ],
+  },
+  {
+    question: "Which function converts a string to an integer in Python?",
+    answers: [
+      { text: "int()", correct: true },
+      { text: "str()", correct: false },
+      { text: "float()", correct: false },
+      { text: "integer()", correct: false },
+    ],
+  },
+  {
+    question: "How do you check the type of a variable in Python?",
+    answers: [
+      { text: "type(variable)", correct: true },
+      { text: "typeof(variable)", correct: false },
+      { text: "checktype(variable)", correct: false },
+      { text: "var.type()", correct: false },
+    ],
+  },
+  {
+    question: "Which of these is a Python boolean value?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "true", correct: false },
+      { text: "TRUE", correct: false },
+      { text: "yes", correct: false },
+    ],
+  },
+  {
+    question: "Which of these keywords is used to handle exceptions?",
+    answers: [
+      { text: "try", correct: true },
+      { text: "catch", correct: false },
+      { text: "except()", correct: false },
+      { text: "error", correct: false },
+    ],
+  },
+  {
+    question: "Which symbol is used for floor division in Python?",
+    answers: [
+      { text: "//", correct: true },
+      { text: "/", correct: false },
+      { text: "%", correct: false },
+      { text: "div", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to import modules in Python?",
+    answers: [
+      { text: "import", correct: true },
+      { text: "include", correct: false },
+      { text: "using", correct: false },
+      { text: "require", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of `print(2 * 3 ** 2)`?",
+    answers: [
+      { text: "18", correct: true },
+      { text: "36", correct: false },
+      { text: "12", correct: false },
+      { text: "9", correct: false },
     ],
   },
 ];
-
-
 
 
 const questionElement = document.getElementById("question");

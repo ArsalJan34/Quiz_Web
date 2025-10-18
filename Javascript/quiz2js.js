@@ -5,190 +5,189 @@
     function hideSidebar() {
       document.querySelector('.sidebar').classList.remove('show');
     }
- const questions = [
+
+const questions = [
   {
-    question: "What will be the output of:\n\n```javascript\nlet x;\nconsole.log(x);\n```",
+    question: "What is the correct file extension for Python files?",
     answers: [
-      { text: "undefined", correct: true },
-      { text: "null", correct: false },
-      { text: "0", correct: false },
-      { text: "Error", correct: false },
+      { text: ".py", correct: true },
+      { text: ".python", correct: false },
+      { text: ".pt", correct: false },
+      { text: ".pyt", correct: false },
     ],
   },
   {
-    question: "Which keyword is used to skip the current iteration of a loop?",
+    question: "Which keyword is used to define a function in Python?",
     answers: [
-      { text: "continue", correct: true },
-      { text: "break", correct: false },
-      { text: "exit", correct: false },
-      { text: "skip", correct: false },
-    ],
-  },
-  {
-    question: "What will be the output of:\n\n```javascript\nconsole.log(2 === '2');\n```",
-    answers: [
-      { text: "false", correct: true },
-      { text: "true", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "How can you convert a string to an integer in JavaScript?",
-    answers: [
-      { text: "parseInt()", correct: true },
-      { text: "int()", correct: false },
-      { text: "toInt()", correct: false },
-      { text: "Number.string()", correct: false },
-    ],
-  },
-  {
-    question: "Which method removes the last element from an array?",
-    answers: [
-      { text: "pop()", correct: true },
-      { text: "push()", correct: false },
-      { text: "shift()", correct: false },
-      { text: "splice(0)", correct: false },
-    ],
-  },
-  {
-    question: "What will this output?\n\n```javascript\nconsole.log('10' + 10);\n```",
-    answers: [
-      { text: "\"1010\"", correct: true },
-      { text: "\"20\"", correct: false },
-      { text: "\"101\"", correct: false },
-      { text: "NaN", correct: false },
-    ],
-  },
-  {
-    question: "Which built-in function displays a message and waits for user input?",
-    answers: [
-      { text: "prompt()", correct: true },
-      { text: "alert()", correct: false },
-      { text: "confirm()", correct: false },
-      { text: "input()", correct: false },
-    ],
-  },
-  {
-    question: "What is the value of:\n\n```javascript\ntrue && false\n```",
-    answers: [
-      { text: "false", correct: true },
-      { text: "true", correct: false },
-      { text: "undefined", correct: false },
-      { text: "null", correct: false },
-    ],
-  },
-  {
-    question: "Which function returns the largest integer less than or equal to a number?",
-    answers: [
-      { text: "Math.floor()", correct: true },
-      { text: "Math.round()", correct: false },
-      { text: "Math.ceil()", correct: false },
-      { text: "Math.low()", correct: false },
-    ],
-  },
-  {
-    question: "What will be the result of:\n\n```javascript\nconsole.log(1 == true);\n```",
-    answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which array method joins all elements into a string?",
-    answers: [
-      { text: "join()", correct: true },
-      { text: "concat()", correct: false },
-      { text: "combine()", correct: false },
-      { text: "toStringAll()", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of:\n\n```javascript\nconsole.log(typeof []);\n```",
-    answers: [
-      { text: "\"object\"", correct: true },
-      { text: "\"array\"", correct: false },
-      { text: "\"list\"", correct: false },
-      { text: "\"undefined\"", correct: false },
-    ],
-  },
-  {
-    question: "Which keyword is used to define a block-scoped variable?",
-    answers: [
-      { text: "let", correct: true },
-      { text: "var", correct: false },
+      { text: "def", correct: true },
+      { text: "function", correct: false },
+      { text: "func", correct: false },
       { text: "define", correct: false },
-      { text: "constant", correct: false },
     ],
   },
   {
-    question: "What will be logged?\n\n```javascript\nconsole.log('5' * 2);\n```",
+    question: "How do you insert a comment in Python?",
     answers: [
-      { text: "10", correct: true },
-      { text: "\"52\"", correct: false },
-      { text: "\"10\"", correct: false },
-      { text: "NaN", correct: false },
+      { text: "# This is a comment", correct: true },
+      { text: "// This is a comment", correct: false },
+      { text: "<!-- This is a comment -->", correct: false },
+      { text: "/* This is a comment */", correct: false },
     ],
   },
   {
-    question: "Which function converts a number to a string?",
+    question: "Which of these is a valid variable name in Python?",
     answers: [
-      { text: "toString()", correct: true },
-      { text: "stringify()", correct: false },
-      { text: "Stringify()", correct: false },
-      { text: "numToStr()", correct: false },
+      { text: "my_var", correct: true },
+      { text: "2var", correct: false },
+      { text: "my-var", correct: false },
+      { text: "my var", correct: false },
     ],
   },
   {
-    question: "What will be the output of:\n\n```javascript\nconsole.log(Boolean(''));\n```",
+    question: "What is the correct way to output 'Hello World' in Python?",
     answers: [
-      { text: "false", correct: true },
+      { text: "print('Hello World')", correct: true },
+      { text: "echo 'Hello World'", correct: false },
+      { text: "printf('Hello World')", correct: false },
+      { text: "console.log('Hello World')", correct: false },
+    ],
+  },
+  {
+    question: "Which of these is a Python data type?",
+    answers: [
+      { text: "int", correct: true },
+      { text: "integer", correct: false },
+      { text: "number", correct: false },
+      { text: "digit", correct: false },
+    ],
+  },
+  {
+    question: "How do you create a list in Python?",
+    answers: [
+      { text: "my_list = [1, 2, 3]", correct: true },
+      { text: "my_list = (1, 2, 3)", correct: false },
+      { text: "my_list = {1, 2, 3}", correct: false },
+      { text: "my_list = <1, 2, 3>", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used for exponentiation in Python?",
+    answers: [
+      { text: "**", correct: true },
+      { text: "^", correct: false },
+      { text: "%", correct: false },
+      { text: "exp()", correct: false },
+    ],
+  },
+  {
+    question: "What will `len('Python')` return?",
+    answers: [
+      { text: "6", correct: true },
+      { text: "5", correct: false },
+      { text: "7", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to create a class in Python?",
+    answers: [
+      { text: "class", correct: true },
+      { text: "Class", correct: false },
+      { text: "def", correct: false },
+      { text: "object", correct: false },
+    ],
+  },
+  {
+    question: "What is the correct syntax to create a dictionary in Python?",
+    answers: [
+      { text: "my_dict = {'key': 'value'}", correct: true },
+      { text: "my_dict = ['key', 'value']", correct: false },
+      { text: "my_dict = ('key': 'value')", correct: false },
+      { text: "my_dict = {key, value}", correct: false },
+    ],
+  },
+  {
+    question: "How do you start a while loop in Python?",
+    answers: [
+      { text: "while condition:", correct: true },
+      { text: "while (condition) {}", correct: false },
+      { text: "loop while condition", correct: false },
+      { text: "while condition {}", correct: false },
+    ],
+  },
+  {
+    question: "Which Python keyword is used for conditional statements?",
+    answers: [
+      { text: "if", correct: true },
+      { text: "for", correct: false },
+      { text: "loop", correct: false },
+      { text: "switch", correct: false },
+    ],
+  },
+  {
+    question: "Which function converts a string to an integer in Python?",
+    answers: [
+      { text: "int()", correct: true },
+      { text: "str()", correct: false },
+      { text: "float()", correct: false },
+      { text: "integer()", correct: false },
+    ],
+  },
+  {
+    question: "How do you check the type of a variable in Python?",
+    answers: [
+      { text: "type(variable)", correct: true },
+      { text: "typeof(variable)", correct: false },
+      { text: "checktype(variable)", correct: false },
+      { text: "var.type()", correct: false },
+    ],
+  },
+  {
+    question: "Which of these is a Python boolean value?",
+    answers: [
+      { text: "True", correct: true },
       { text: "true", correct: false },
-      { text: "undefined", correct: false },
-      { text: "null", correct: false },
+      { text: "TRUE", correct: false },
+      { text: "yes", correct: false },
     ],
   },
   {
-    question: "Which method adds a new element at the beginning of an array?",
+    question: "Which of these keywords is used to handle exceptions?",
     answers: [
-      { text: "unshift()", correct: true },
-      { text: "push()", correct: false },
-      { text: "shift()", correct: false },
-      { text: "insert()", correct: false },
+      { text: "try", correct: true },
+      { text: "catch", correct: false },
+      { text: "except()", correct: false },
+      { text: "error", correct: false },
     ],
   },
   {
-    question: "What does this expression return?\n\n```javascript\ntypeof NaN === 'number'\n```",
+    question: "Which symbol is used for floor division in Python?",
     answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which operator is used to combine multiple conditions?",
-    answers: [
-      { text: "&&", correct: true },
-      { text: "&", correct: false },
-      { text: "||", correct: false },
+      { text: "//", correct: true },
       { text: "/", correct: false },
+      { text: "%", correct: false },
+      { text: "div", correct: false },
     ],
   },
   {
-    question: "What will be the output of:\n\n```javascript\nconsole.log('hello'.toUpperCase());\n```",
+    question: "Which keyword is used to import modules in Python?",
     answers: [
-      { text: "\"HELLO\"", correct: true },
-      { text: "\"hello\"", correct: false },
-      { text: "\"Hello\"", correct: false },
-      { text: "Error", correct: false },
+      { text: "import", correct: true },
+      { text: "include", correct: false },
+      { text: "using", correct: false },
+      { text: "require", correct: false },
     ],
-  }
+  },
+  {
+    question: "What is the output of `print(2 * 3 ** 2)`?",
+    answers: [
+      { text: "18", correct: true },
+      { text: "36", correct: false },
+      { text: "12", correct: false },
+      { text: "9", correct: false },
+    ],
+  },
 ];
-
-
 
 
 const questionElement = document.getElementById("question");

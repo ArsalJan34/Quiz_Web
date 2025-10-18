@@ -5,185 +5,186 @@
     function hideSidebar() {
       document.querySelector('.sidebar').classList.remove('show');
     }
-const javaQuestionsLevel1 = [
+
+const questions = [
   {
-    question: "What is the correct file extension for Java files?",
+    question: "What is the correct file extension for Python files?",
     answers: [
-      { text: ".java", correct: true },
-      { text: ".jav", correct: false },
-      { text: ".class", correct: false },
-      { text: ".jv", correct: false },
+      { text: ".py", correct: true },
+      { text: ".python", correct: false },
+      { text: ".pt", correct: false },
+      { text: ".pyt", correct: false },
     ],
   },
   {
-    question: "Which method is the entry point of every Java program?",
+    question: "Which keyword is used to define a function in Python?",
     answers: [
-      { text: "public static void main(String[] args)", correct: true },
-      { text: "start()", correct: false },
-      { text: "run()", correct: false },
-      { text: "main()", correct: false },
+      { text: "def", correct: true },
+      { text: "function", correct: false },
+      { text: "func", correct: false },
+      { text: "define", correct: false },
     ],
   },
   {
-    question: "Who developed Java Programming Language?",
+    question: "How do you insert a comment in Python?",
     answers: [
-      { text: "James Gosling", correct: true },
-      { text: "Guido van Rossum", correct: false },
-      { text: "Bjarne Stroustrup", correct: false },
-      { text: "Dennis Ritchie", correct: false },
+      { text: "# This is a comment", correct: true },
+      { text: "// This is a comment", correct: false },
+      { text: "<!-- This is a comment -->", correct: false },
+      { text: "/* This is a comment */", correct: false },
     ],
   },
   {
-    question: "Java is a ____ language.",
+    question: "Which of these is a valid variable name in Python?",
     answers: [
-      { text: "High-level", correct: true },
-      { text: "Low-level", correct: false },
-      { text: "Assembly", correct: false },
-      { text: "Machine", correct: false },
+      { text: "my_var", correct: true },
+      { text: "2var", correct: false },
+      { text: "my-var", correct: false },
+      { text: "my var", correct: false },
     ],
   },
   {
-    question: "Which of the following is used to print text in Java?",
+    question: "What is the correct way to output 'Hello World' in Python?",
     answers: [
-      { text: "System.out.println()", correct: true },
-      { text: "print()", correct: false },
-      { text: "echo()", correct: false },
-      { text: "printf()", correct: false },
+      { text: "print('Hello World')", correct: true },
+      { text: "echo 'Hello World'", correct: false },
+      { text: "printf('Hello World')", correct: false },
+      { text: "console.log('Hello World')", correct: false },
     ],
   },
   {
-    question: "Which of the following is a valid identifier in Java?",
-    answers: [
-      { text: "_value", correct: true },
-      { text: "1value", correct: false },
-      { text: "value-name", correct: false },
-      { text: "value name", correct: false },
-    ],
-  },
-  {
-    question: "Which of these is a primitive data type in Java?",
+    question: "Which of these is a Python data type?",
     answers: [
       { text: "int", correct: true },
-      { text: "Integer", correct: false },
-      { text: "String", correct: false },
-      { text: "Object", correct: false },
+      { text: "integer", correct: false },
+      { text: "number", correct: false },
+      { text: "digit", correct: false },
     ],
   },
   {
-    question: "What is used to compile Java code?",
+    question: "How do you create a list in Python?",
     answers: [
-      { text: "javac", correct: true },
-      { text: "java", correct: false },
-      { text: "jvm", correct: false },
-      { text: "jre", correct: false },
+      { text: "my_list = [1, 2, 3]", correct: true },
+      { text: "my_list = (1, 2, 3)", correct: false },
+      { text: "my_list = {1, 2, 3}", correct: false },
+      { text: "my_list = <1, 2, 3>", correct: false },
     ],
   },
   {
-    question: "Which component converts bytecode to machine code?",
+    question: "Which operator is used for exponentiation in Python?",
     answers: [
-      { text: "JVM", correct: true },
-      { text: "JRE", correct: false },
-      { text: "JDK", correct: false },
-      { text: "Compiler", correct: false },
+      { text: "**", correct: true },
+      { text: "^", correct: false },
+      { text: "%", correct: false },
+      { text: "exp()", correct: false },
     ],
   },
   {
-    question: "Which keyword is used to declare a variable in Java?",
+    question: "What will `len('Python')` return?",
     answers: [
-      { text: "No keyword needed", correct: true },
-      { text: "var", correct: false },
-      { text: "dim", correct: false },
-      { text: "let", correct: false },
+      { text: "6", correct: true },
+      { text: "5", correct: false },
+      { text: "7", correct: false },
+      { text: "Error", correct: false },
     ],
   },
   {
-    question: "What symbol is used to end a statement in Java?",
-    answers: [
-      { text: ";", correct: true },
-      { text: ":", correct: false },
-      { text: ".", correct: false },
-      { text: "/", correct: false },
-    ],
-  },
-  {
-    question: "Which of these is not a Java keyword?",
-    answers: [
-      { text: "include", correct: true },
-      { text: "static", correct: false },
-      { text: "class", correct: false },
-      { text: "if", correct: false },
-    ],
-  },
-  {
-    question: "What does JVM stand for?",
-    answers: [
-      { text: "Java Virtual Machine", correct: true },
-      { text: "Java Visual Machine", correct: false },
-      { text: "Java Version Manager", correct: false },
-      { text: "Java Variable Module", correct: false },
-    ],
-  },
-  {
-    question: "Which function reads input from the user in Java?",
-    answers: [
-      { text: "Scanner.next()", correct: true },
-      { text: "input()", correct: false },
-      { text: "read()", correct: false },
-      { text: "gets()", correct: false },
-    ],
-  },
-  {
-    question: "Which of these is a valid comment in Java?",
-    answers: [
-      { text: "// This is a comment", correct: true },
-      { text: "# This is a comment", correct: false },
-      { text: "<!-- comment -->", correct: false },
-      { text: "/* comment */", correct: false },
-    ],
-  },
-  {
-    question: "Which keyword is used to create a class in Java?",
+    question: "Which keyword is used to create a class in Python?",
     answers: [
       { text: "class", correct: true },
-      { text: "define", correct: false },
-      { text: "object", correct: false },
-      { text: "new", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following is used to store true/false values?",
-    answers: [
-      { text: "boolean", correct: true },
-      { text: "int", correct: false },
-      { text: "byte", correct: false },
-      { text: "char", correct: false },
-    ],
-  },
-  {
-    question: "Which operator is used for assignment in Java?",
-    answers: [
-      { text: "=", correct: true },
-      { text: "==", correct: false },
-      { text: "=>", correct: false },
-      { text: ":", correct: false },
-    ],
-  },
-  {
-    question: "Which of these can be used to store multiple values of same type?",
-    answers: [
-      { text: "Array", correct: true },
       { text: "Class", correct: false },
-      { text: "Package", correct: false },
-      { text: "Variable", correct: false },
+      { text: "def", correct: false },
+      { text: "object", correct: false },
     ],
   },
   {
-    question: "What is the output type of System.out.println()?",
+    question: "What is the correct syntax to create a dictionary in Python?",
     answers: [
-      { text: "Displays text to console", correct: true },
-      { text: "Reads input", correct: false },
-      { text: "Stores data", correct: false },
-      { text: "Creates file", correct: false },
+      { text: "my_dict = {'key': 'value'}", correct: true },
+      { text: "my_dict = ['key', 'value']", correct: false },
+      { text: "my_dict = ('key': 'value')", correct: false },
+      { text: "my_dict = {key, value}", correct: false },
+    ],
+  },
+  {
+    question: "How do you start a while loop in Python?",
+    answers: [
+      { text: "while condition:", correct: true },
+      { text: "while (condition) {}", correct: false },
+      { text: "loop while condition", correct: false },
+      { text: "while condition {}", correct: false },
+    ],
+  },
+  {
+    question: "Which Python keyword is used for conditional statements?",
+    answers: [
+      { text: "if", correct: true },
+      { text: "for", correct: false },
+      { text: "loop", correct: false },
+      { text: "switch", correct: false },
+    ],
+  },
+  {
+    question: "Which function converts a string to an integer in Python?",
+    answers: [
+      { text: "int()", correct: true },
+      { text: "str()", correct: false },
+      { text: "float()", correct: false },
+      { text: "integer()", correct: false },
+    ],
+  },
+  {
+    question: "How do you check the type of a variable in Python?",
+    answers: [
+      { text: "type(variable)", correct: true },
+      { text: "typeof(variable)", correct: false },
+      { text: "checktype(variable)", correct: false },
+      { text: "var.type()", correct: false },
+    ],
+  },
+  {
+    question: "Which of these is a Python boolean value?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "true", correct: false },
+      { text: "TRUE", correct: false },
+      { text: "yes", correct: false },
+    ],
+  },
+  {
+    question: "Which of these keywords is used to handle exceptions?",
+    answers: [
+      { text: "try", correct: true },
+      { text: "catch", correct: false },
+      { text: "except()", correct: false },
+      { text: "error", correct: false },
+    ],
+  },
+  {
+    question: "Which symbol is used for floor division in Python?",
+    answers: [
+      { text: "//", correct: true },
+      { text: "/", correct: false },
+      { text: "%", correct: false },
+      { text: "div", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to import modules in Python?",
+    answers: [
+      { text: "import", correct: true },
+      { text: "include", correct: false },
+      { text: "using", correct: false },
+      { text: "require", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of `print(2 * 3 ** 2)`?",
+    answers: [
+      { text: "18", correct: true },
+      { text: "36", correct: false },
+      { text: "12", correct: false },
+      { text: "9", correct: false },
     ],
   },
 ];

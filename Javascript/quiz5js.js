@@ -5,190 +5,189 @@
     function hideSidebar() {
       document.querySelector('.sidebar').classList.remove('show');
     }
+
 const questions = [
   {
-    question: "What is the prototype of an array in JavaScript?",
+    question: "What is the correct file extension for Python files?",
     answers: [
-      { text: "Array.prototype", correct: true },
-      { text: "Object.prototype", correct: false },
-      { text: "Function.prototype", correct: false },
-      { text: "null", correct: false },
+      { text: ".py", correct: true },
+      { text: ".python", correct: false },
+      { text: ".pt", correct: false },
+      { text: ".pyt", correct: false },
     ],
   },
   {
-    question: "What is the output of the following code?\n\nconsole.log(Object.getPrototypeOf([]) === Array.prototype);",
+    question: "Which keyword is used to define a function in Python?",
     answers: [
-      { text: "true", correct: true },
-      { text: "false", correct: false },
-      { text: "undefined", correct: false },
-      { text: "TypeError", correct: false },
+      { text: "def", correct: true },
+      { text: "function", correct: false },
+      { text: "func", correct: false },
+      { text: "define", correct: false },
     ],
   },
   {
-    question: "Which of the following best describes the 'prototype chain'?",
+    question: "How do you insert a comment in Python?",
     answers: [
-      { text: "A mechanism by which objects inherit properties from other objects.", correct: true },
-      { text: "A list of all functions defined in a script.", correct: false },
-      { text: "A sequence of constructor calls.", correct: false },
-      { text: "A method to link arrays and functions.", correct: false },
+      { text: "# This is a comment", correct: true },
+      { text: "// This is a comment", correct: false },
+      { text: "<!-- This is a comment -->", correct: false },
+      { text: "/* This is a comment */", correct: false },
     ],
   },
   {
-    question: "What happens if you call a class constructor without 'new'?",
+    question: "Which of these is a valid variable name in Python?",
     answers: [
-      { text: "It throws a TypeError.", correct: true },
-      { text: "It returns undefined.", correct: false },
-      { text: "It automatically uses 'new'.", correct: false },
-      { text: "It binds 'this' to the global object.", correct: false },
+      { text: "my_var", correct: true },
+      { text: "2var", correct: false },
+      { text: "my-var", correct: false },
+      { text: "my var", correct: false },
     ],
   },
   {
-    question: "Which built-in method can you use to create an object with no prototype?",
+    question: "What is the correct way to output 'Hello World' in Python?",
     answers: [
-      { text: "Object.create(null)", correct: true },
-      { text: "Object.freeze()", correct: false },
-      { text: "Object.assign()", correct: false },
-      { text: "Object.prototype()", correct: false },
+      { text: "print('Hello World')", correct: true },
+      { text: "echo 'Hello World'", correct: false },
+      { text: "printf('Hello World')", correct: false },
+      { text: "console.log('Hello World')", correct: false },
     ],
   },
   {
-    question: "What is the output of this code?\n\nconsole.log(typeof new Function());",
+    question: "Which of these is a Python data type?",
     answers: [
-      { text: "function", correct: true },
+      { text: "int", correct: true },
+      { text: "integer", correct: false },
+      { text: "number", correct: false },
+      { text: "digit", correct: false },
+    ],
+  },
+  {
+    question: "How do you create a list in Python?",
+    answers: [
+      { text: "my_list = [1, 2, 3]", correct: true },
+      { text: "my_list = (1, 2, 3)", correct: false },
+      { text: "my_list = {1, 2, 3}", correct: false },
+      { text: "my_list = <1, 2, 3>", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used for exponentiation in Python?",
+    answers: [
+      { text: "**", correct: true },
+      { text: "^", correct: false },
+      { text: "%", correct: false },
+      { text: "exp()", correct: false },
+    ],
+  },
+  {
+    question: "What will `len('Python')` return?",
+    answers: [
+      { text: "6", correct: true },
+      { text: "5", correct: false },
+      { text: "7", correct: false },
+      { text: "Error", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to create a class in Python?",
+    answers: [
+      { text: "class", correct: true },
+      { text: "Class", correct: false },
+      { text: "def", correct: false },
       { text: "object", correct: false },
-      { text: "undefined", correct: false },
-      { text: "constructor", correct: false },
     ],
   },
   {
-    question: "Which of these is TRUE about JavaScript memory management?",
+    question: "What is the correct syntax to create a dictionary in Python?",
     answers: [
-      { text: "It uses automatic garbage collection based on reachability.", correct: true },
-      { text: "It requires manual memory deallocation.", correct: false },
-      { text: "It uses reference counting only.", correct: false },
-      { text: "It collects memory only at program termination.", correct: false },
+      { text: "my_dict = {'key': 'value'}", correct: true },
+      { text: "my_dict = ['key', 'value']", correct: false },
+      { text: "my_dict = ('key': 'value')", correct: false },
+      { text: "my_dict = {key, value}", correct: false },
     ],
   },
   {
-    question: "What is the difference between microtasks and macrotasks?",
+    question: "How do you start a while loop in Python?",
     answers: [
-      { text: "Microtasks (Promises) run before macrotasks (setTimeout).", correct: true },
-      { text: "Macrotasks always run first.", correct: false },
-      { text: "They are executed randomly by the event loop.", correct: false },
-      { text: "Microtasks are synchronous.", correct: false },
+      { text: "while condition:", correct: true },
+      { text: "while (condition) {}", correct: false },
+      { text: "loop while condition", correct: false },
+      { text: "while condition {}", correct: false },
     ],
   },
   {
-    question: "What is the output of the following?\n\nPromise.resolve().then(() => console.log('A'));\nconsole.log('B');",
+    question: "Which Python keyword is used for conditional statements?",
     answers: [
-      { text: "B then A", correct: true },
-      { text: "A then B", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
+      { text: "if", correct: true },
+      { text: "for", correct: false },
+      { text: "loop", correct: false },
+      { text: "switch", correct: false },
     ],
   },
   {
-    question: "What will the following code print?\n\n(async () => {\n  console.log(await Promise.resolve('X'));\n})();",
+    question: "Which function converts a string to an integer in Python?",
     answers: [
-      { text: "X", correct: true },
-      { text: "Promise { 'X' }", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
+      { text: "int()", correct: true },
+      { text: "str()", correct: false },
+      { text: "float()", correct: false },
+      { text: "integer()", correct: false },
     ],
   },
   {
-    question: "What is the internal slot [[Prototype]] used for?",
+    question: "How do you check the type of a variable in Python?",
     answers: [
-      { text: "Linking an object to its prototype for inheritance.", correct: true },
-      { text: "Storing constructor parameters.", correct: false },
-      { text: "Referencing private variables.", correct: false },
-      { text: "Defining scope chains.", correct: false },
+      { text: "type(variable)", correct: true },
+      { text: "typeof(variable)", correct: false },
+      { text: "checktype(variable)", correct: false },
+      { text: "var.type()", correct: false },
     ],
   },
   {
-    question: "What is the output of this code?\n\nlet x = { a: 1 };\nlet y = x;\ny.a = 2;\nconsole.log(x.a);",
+    question: "Which of these is a Python boolean value?",
     answers: [
-      { text: "2", correct: true },
-      { text: "1", correct: false },
-      { text: "undefined", correct: false },
-      { text: "NaN", correct: false },
-    ],
-  },
-  {
-    question: "What happens when you use `delete` on a variable declared with `var`?",
-    answers: [
-      { text: "It does nothing (variable remains).", correct: true },
-      { text: "It removes the variable.", correct: false },
-      { text: "It throws an error.", correct: false },
-      { text: "It converts it to undefined.", correct: false },
-    ],
-  },
-  {
-    question: "Which of these statements about WeakMap is TRUE?",
-    answers: [
-      { text: "Keys must be objects and are held weakly.", correct: true },
-      { text: "Keys can be strings or numbers.", correct: false },
-      { text: "It allows key enumeration.", correct: false },
-      { text: "It prevents garbage collection.", correct: false },
-    ],
-  },
-  {
-    question: "What will the following code print?\n\nlet obj = { a: 10 };\nObject.freeze(obj);\nobj.a = 20;\nconsole.log(obj.a);",
-    answers: [
-      { text: "10", correct: true },
-      { text: "20", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following describes the 'Temporal Dead Zone'?",
-    answers: [
-      { text: "The time between variable creation and initialization with let/const.", correct: true },
-      { text: "The time before a function executes.", correct: false },
-      { text: "The delay before garbage collection.", correct: false },
-      { text: "A deprecated feature in ES5.", correct: false },
-    ],
-  },
-  {
-    question: "What does the `Reflect` API in JavaScript provide?",
-    answers: [
-      { text: "A set of static methods for interceptable object operations.", correct: true },
-      { text: "Reflection of DOM elements.", correct: false },
-      { text: "Real-time debugging tools.", correct: false },
-      { text: "Type checking and validation.", correct: false },
-    ],
-  },
-  {
-    question: "What will this code output?\n\nconsole.log(Object.is(+0, -0));",
-    answers: [
-      { text: "false", correct: true },
+      { text: "True", correct: true },
       { text: "true", correct: false },
-      { text: "undefined", correct: false },
-      { text: "Error", correct: false },
+      { text: "TRUE", correct: false },
+      { text: "yes", correct: false },
     ],
   },
   {
-    question: "Which of the following cannot be used as a property key in a normal JavaScript object?",
+    question: "Which of these keywords is used to handle exceptions?",
     answers: [
-      { text: "An object", correct: true },
-      { text: "A string", correct: false },
-      { text: "A number", correct: false },
-      { text: "A symbol", correct: false },
+      { text: "try", correct: true },
+      { text: "catch", correct: false },
+      { text: "except()", correct: false },
+      { text: "error", correct: false },
     ],
   },
   {
-    question: "What is the main purpose of the event delegation pattern in JavaScript?",
+    question: "Which symbol is used for floor division in Python?",
     answers: [
-      { text: "To handle events efficiently by using a common ancestor element.", correct: true },
-      { text: "To prevent event propagation.", correct: false },
-      { text: "To delay event handling until DOM is loaded.", correct: false },
-      { text: "To assign events individually to each child element.", correct: false },
+      { text: "//", correct: true },
+      { text: "/", correct: false },
+      { text: "%", correct: false },
+      { text: "div", correct: false },
+    ],
+  },
+  {
+    question: "Which keyword is used to import modules in Python?",
+    answers: [
+      { text: "import", correct: true },
+      { text: "include", correct: false },
+      { text: "using", correct: false },
+      { text: "require", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of `print(2 * 3 ** 2)`?",
+    answers: [
+      { text: "18", correct: true },
+      { text: "36", correct: false },
+      { text: "12", correct: false },
+      { text: "9", correct: false },
     ],
   },
 ];
-
-
 
 
 const questionElement = document.getElementById("question");
